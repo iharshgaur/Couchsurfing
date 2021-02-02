@@ -1,0 +1,171 @@
+.RightPaneContainer {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  height: 650px;
+}
+.RightPaneContainer > * {
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.RightPaneContainer__Div__Top {
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+  height: 80px;
+}
+
+.RightPaneContainer__Div__Top > button {
+  height: 40px;
+  padding: 10px;
+  font-weight: bold;
+  color: white;
+  background-color: #287fb8;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.RightPaneContainer__Div__Navigation,
+.RightPaneContainer__References__Navigation {
+  height: 80px;
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.RightPaneContainer__Div__Navigation > button,
+.RightPaneContainer__References__Navigation > button {
+  margin-right: 20px;
+  width: fit-content;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  outline: none;
+}
+.RightPaneContainer__Div__Navigation > button:focus,
+.RightPaneContainer__References__Navigation > button:focus {
+  color: coral;
+}
+
+.RightPaneContainer__Div__Overview__Content,
+.RightPaneContainer__Div__About__Content {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  color: grey;
+}
+.RightPaneContainer__Div__Overview__Header,
+.RightPaneContainer__Div__About__Header {
+  padding-left: 10px;
+}
+.RightPaneContainer__Div__About__Content {
+  background-color: #f7f7f7;
+  width: 98%;
+  padding: 1%;
+  text-align: justify;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+hr {
+  margin: 0;
+}
+
+.RightPaneContainer__Div__Favourites {
+  display: flex;
+  flex-direction: column;
+}
+
+.RightPaneContainer__Div__Favourites__Header {
+  display: flex;
+  width: 98%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+}
+.RightPaneContainer__Div__Favourites__Header > div > * {
+  margin: 10px;
+}
+.RightPaneContainer__Div__Favourites__Header > div > h5 {
+  color: grey;
+}
+.RightPaneContainer__Div__Favourites__Header > button {
+  height: 40px;
+  padding: 10px;
+  font-weight: bold;
+  color: white;
+  background-color: #287fb8;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.RightPaneContainer__Div__Favourites__Content {
+  background-color: #f7f7f7;
+  width: 100%;
+  text-align: justify;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.Friends,
+.Photos {
+  width: 96%;
+  padding: 2%;
+}
+.Friends > h4,
+.Photos > h4 {
+  width: 100%;
+  background-color: #eceff2;
+  color: #2d374c;
+  padding: 15px 20px;
+  margin-left: -20px;
+}
+.Friends > button {
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: bold;
+  color: white;
+  background-color: #ed6504;
+}
+
+.References {
+  width: 100%;
+}
+.References__header {
+  width: 99%;
+  padding: 1%;
+}
+.References > p {
+  background-color: #f7f7f7;
+  width: 100%;
+  text-align: justify;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.RightPaneContainer__References__Navigation {
+  height: 50px;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-right: none;
+  margin: 0;
+}
+.Photos > button {
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: bold;
+  color: white;
+  background-color: #287fb8;
+}
