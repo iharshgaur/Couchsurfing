@@ -10,14 +10,14 @@ function Discussions() {
     dispatch(changeCountry("USA"));
   }, [dispatch]);
 
-  const history = useHistory();
-  const handleHosts = () => {
-    history.push(`/hosts/USA`);
-  };
+  // const history = useHistory();
+  // const handleHosts = () => {
+  //   history.push(`/hosts/USA`);
+  // };
 
   return (
     <>
-      <button onClick={handleHosts}>USA</button>
+      {/* <button onClick={handleHosts}>USA</button> */}
       <DiscussionForum />
     </>
   );
