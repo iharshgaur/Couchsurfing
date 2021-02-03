@@ -1,14 +1,42 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import styles from "./QuestionDetail.module.css";
+import { addComments } from "../../Redux/Discussion/action";
+import { v4 as uuid } from "uuid";
+import { getDiscussions } from "../../Redux/Discussion/action";
 
 function QuestionDetail() {
+  const [comment, setComment] = React.useState("");
+  const [ques, setQues] = React.useState({});
+  const username = "Default";
+  const dispatch = useDispatch();
   const { id } = useParams();
   const alldiscussions = useSelector(
     (state) => state.discussions.alldiscussions
   );
-  const ques = alldiscussions.find((discussion) => discussion.id === id);
+  React.useEffect(() => {
+    setQues(alldiscussions.find((discussion) => discussion.id === id));
+  }, [alldiscussions, id]);
+
+  const HandlePostComment = () => {
+    const payload = {
+      country: ques.country,
+      city: ques.city,
+      question: ques.question,
+      topic: ques.topic,
+      discussions: [...ques.discussions, [`${uuid()}`, username, comment]],
+      username: ques.username,
+    };
+    setQues(payload);
+
+    dispatch(addComments(payload, id));
+    dispatch(
+      getDiscussions({
+        country: ques.country,
+      })
+    );
+  };
 
   return (
     <div className={styles.QuestionDetail}>
@@ -28,7 +56,7 @@ function QuestionDetail() {
           <p>{ques.topic}</p>
         </div>
         <hr />
-        <div className={styles.QuestionDetail__Detail}>
+        <div className={styles.QuestionDetail__Detail__Comments}>
           {ques.discussions?.map((comment) => (
             <div key={comment[0]} style={{ padding: "10px" }}>
               <div style={{ display: "flex", alignItems: "center" }}>
@@ -42,6 +70,16 @@ function QuestionDetail() {
               <p>{comment[2]}</p>
             </div>
           ))}
+
+          <div className={styles.QuestionDetail__Detail__Add__Comments}>
+            <input
+              type="text"
+              placeholder="Add Comment..."
+              onChange={(e) => setComment(e.target.value)}
+              value={comment}
+            />
+            <button onClick={HandlePostComment}>Post</button>
+          </div>
         </div>
       </div>
     </div>

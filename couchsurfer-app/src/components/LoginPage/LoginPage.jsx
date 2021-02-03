@@ -1,6 +1,6 @@
 import React from "react";
-import { SignUpEmail } from "../SignUpEmail/SignUpEmail";
-import { SignUpFaster } from "../SignUpFaster/SignUpFaster";
+// import { SignUpEmail } from "../SignUpEmail/SignUpEmail";
+// import { SignUpFaster } from "../SignUpFaster/SignUpFaster";
 
 import styles from "./LoginPage.module.css";
 
