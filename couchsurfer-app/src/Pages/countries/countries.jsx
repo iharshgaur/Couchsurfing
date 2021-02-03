@@ -3,16 +3,21 @@ import { useDispatch } from "react-redux";
 import { getCountry } from "../../Redux/Country/action";
 import {CountryLists} from "../../Components/CountriesList/CountryList";
 import {changeCountry} from "../../Redux/Discussion/action"
- function Country() {
+import { useParams } from "react-router-dom";
+import Navbar from "../../Components/Navbar/Navbar";
+function Country() {
+  const { country } = useParams();
   const dispatch = useDispatch();
 
   React.useEffect(() => {
-    dispatch(changeCountry("USA"));
+    dispatch(changeCountry(country));
   }, [dispatch]);
 
   return (
     <>
-      <CountryLists/>
+     
+      <CountryLists />
+      <Navbar></Navbar>
     </>
   );
 }
