@@ -26,7 +26,7 @@ function CreateDiscussionTopic() {
       city: data.city,
     };
     dispatch(addDiscussions(payload));
-    history.push(`/discussions/${currentCountry}`);
+    history.push(`/country/${currentCountry}`);
   };
 
   const countries = useSelector((state) => state.countries.countries);

@@ -3,7 +3,8 @@ import styles from "./DiscussionForum.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getDiscussions } from "../../Redux/Discussion/action";
 import { useHistory } from "react-router-dom";
-function DiscussionForum({ country }) {
+function DiscussionForum({ countryName }) {
+  console.log(countryName, "herer");
   const history = useHistory();
   const dispatch = useDispatch();
   const alldiscussions = useSelector(
@@ -12,22 +13,18 @@ function DiscussionForum({ country }) {
   React.useEffect(() => {
     dispatch(
       getDiscussions({
-        country: country,
+        country: countryName,
       })
     );
-  }, [dispatch, country]);
+  }, [dispatch, countryName]);
 
   return (
     <div className={styles.DiscussionForum}>
       <div className={styles.DiscussionForum__Head}>
-        <div className={styles.DiscussionForum__Head__Search}>
-          <input type="text" placeholder="Search for something..." />
-          <button>Search</button>
-        </div>
         <div className={styles.DiscussionForum__Head__CreateDiscussion}>
           <button
             onClick={() =>
-              history.push(`/discussions/${country}/creatediscussion`)
+              history.push(`/discussions/${countryName}/creatediscussion`)
             }
           >
             Create discussion
@@ -40,7 +37,9 @@ function DiscussionForum({ country }) {
             className={styles.DiscussionForum__Discussions__Question}
             key={question.id}
             onClick={() =>
-              history.push(`/discussions/${country}/question/${question.id}`)
+              history.push(
+                `/discussions/${countryName}/question/${question.id}`
+              )
             }
           >
             <div className={styles.Question__Top}>
