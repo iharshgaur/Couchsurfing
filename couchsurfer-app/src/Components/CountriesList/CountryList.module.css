@@ -1,0 +1,17 @@
+.countryList__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+.countryList__hostsCard{
+    height: 500px;
+    width: 25%;
+    background-color: white;
+    margin: 50px auto;
+   
+}
+
+.countryList__head{
+    border-bottom: 1px solid rgb(201, 199, 199);
+     padding: 0px 50px 10px;
+}
+
