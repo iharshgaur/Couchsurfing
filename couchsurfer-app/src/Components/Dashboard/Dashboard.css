@@ -1,0 +1,157 @@
+.dashboard__container {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+body {
+  background-color: #f1efea;
+}
+.dashboard__container__left > div {
+  height: 180px;
+  width: 300px;
+  background-color: #ffffff;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 0 rgb(163, 163, 163);
+}
+.dashboard__container__left > div:first-child {
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  line-height: 20px;
+}
+.dashboard__container__left__hr {
+  width: 300px;
+  border-bottom: 1px solid grey;
+}
+.dashboard__container__left > div > div > select {
+  width: 80%;
+  height: 50px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.dashboard__container__left > div:nth-child(2) > h3 {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.dashboard__container__left__graph {
+  display: flex;
+  margin: 10px;
+}
+.dashboard__container__left > div:nth-child(2) > h5 {
+  padding-left: 72px;
+  margin-top: -2px;
+  font-size: 16px;
+  color: #667fb8;
+}
+.dashboard__container__left > div:nth-child(2) > h5:hover {
+  color: orangered;
+  cursor: pointer;
+}
+
+.dashboard__container__left > div:nth-child(3) > button {
+  background-color: #3b5998;
+  width: 200px;
+  border: none;
+  margin: 20px;
+  margin-left: 50px;
+  border-radius: 5px;
+}
+.dashboard__container__left > div:nth-child(3) > p {
+  padding: 20px;
+}
+.dashboard__container__right {
+  height: 400px;
+  background-color: #ffffff;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 0 rgb(163, 163, 163);
+  overflow: hidden;
+}
+.dashboard__container__right > div > h4 {
+  margin-left: 50px;
+}
+.dashboard__container__right__hr {
+  border-bottom: 1px solid grey;
+}
+.dashboard__container__right_image {
+  display: flex;
+  margin: 10px;
+  justify-content: space-around;
+}
+.dashboard__container__right_image > div {
+  width: 250px;
+  height: 200px;
+  margin: 10px;
+  background-image: url(https://cdn.britannica.com/37/189837-050-F0AF383E/New-Delhi-India-War-Memorial-arch-Sir.jpg);
+  image-resolution: initial;
+  background-position: center;
+  background-size: 100mm;
+  color: #ffffff;
+  text-align: center;
+}
+.dashboard__container__right_image > div:nth-child(2) {
+  background-image: url(https://static5.depositphotos.com/1030296/395/i/950/depositphotos_3958211-stock-photo-new-york-cityscape-tourism-concept.jpg);
+}
+.dashboard__container__right_image > div:nth-child(3) {
+  background-image: url(https://www.theregreview.org/wp-content/uploads/2020/05/covid19andcooperativeadmin.jpg);
+}
+.dashboard__container__right__search {
+  text-align: center;
+}
+.dashboard__container__right__search > input {
+  width: 350px;
+  height: 35px;
+  border-radius: 20px;
+  outline: none;
+  border: 1px solid grey;
+  font-size: 16px;
+}
+.dashboard__container__right__logo {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.dashboard__container__right__logo > h4 {
+  margin-left: 10px;
+}
+.dashboard__container__right__logo__plans {
+  display: flex;
+  align-items: center;
+  background-color: #f7f7f7;
+  justify-content: center;
+  height: 200px;
+}
+.dashboard__container__right__logo__plans > p {
+  text-align: center;
+}
+.dashboard__container__right__logo__plans__links {
+  display: flex;
+  justify-content: space-around;
+  height: 150px;
+  align-items: center;
+}
+.dashboard__container__right__logo__plans__links > p {
+  color: #3b5998;
+  font-weight: 500;
+}
+.dashboard__container__right__logo__plans__links > p:hover {
+  color: orangered;
+  cursor: pointer;
+}
+.Navbar__linksDiv__settings {
+  height: 100px;
+  width: 150px;
+  position: fixed;
+  top: 80px;
+  right: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+.p2 {
+  color: black;
+  font-size: 18px;
+}

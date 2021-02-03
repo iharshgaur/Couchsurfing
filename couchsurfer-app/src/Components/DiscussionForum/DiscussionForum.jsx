@@ -7,6 +7,9 @@ function DiscussionForum() {
   const country = useSelector((state) => state.discussions.country);
   const history = useHistory();
   const dispatch = useDispatch();
+  const alldiscussions = useSelector(
+    (state) => state.discussions.alldiscussions
+  );
   React.useEffect(() => {
     dispatch(
       getDiscussions({
@@ -15,14 +18,22 @@ function DiscussionForum() {
     );
   }, [dispatch, country]);
 
-  const alldiscussions = useSelector(
-    (state) => state.discussions.alldiscussions
-  );
   return (
     <div className={styles.DiscussionForum}>
-      <div className={styles.DiscussionForum__Search}>
-        <input type="text" placeholder="Search for something..." />
-        <button>Search</button>
+      <div className={styles.DiscussionForum__Head}>
+        <div className={styles.DiscussionForum__Head__Search}>
+          <input type="text" placeholder="Search for something..." />
+          <button>Search</button>
+        </div>
+        <div className={styles.DiscussionForum__Head__CreateDiscussion}>
+          <button
+            onClick={() =>
+              history.push(`/discussions/${country}/creatediscussion`)
+            }
+          >
+            Create discussion
+          </button>
+        </div>
       </div>
       <div className={styles.DiscussionForum__Discussions}>
         {alldiscussions?.map((question) => (
