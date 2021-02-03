@@ -23,7 +23,7 @@ function Routes() {
       <Route exact path="/discussions/:country/creatediscussion">
         <CreateDiscussion />
       </Route>
-      <Route path="/landingpage">
+      <Route path="/">
         <LandingPage />
       </Route>
       <Route path="/country">
