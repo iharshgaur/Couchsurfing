@@ -1,9 +1,11 @@
 import { combineReducers, createStore, applyMiddleware, compose } from "redux";
 
 import { discussionReducer } from "./Discussion/reducer";
+import hostReducer from "./Hosts/reducer"
 
 const reducers = combineReducers({
-    discussions : discussionReducer
+    discussions : discussionReducer,
+    hosts : hostReducer
 });
 
 const customMiddleware = (store) => (next) => (action) => {
