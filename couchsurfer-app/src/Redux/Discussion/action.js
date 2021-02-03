@@ -57,6 +57,36 @@ const addCommentsFailure = (error)=>{
 }
 
 
+
+//ADD DISCUSSION TOPIC
+
+
+const addDiscussionRequest = ()=>{
+    return{
+        type : actionType.ADD_DISCUSSIONS_REQUEST
+    }
+}
+
+
+
+const addDiscussionSuccess = (payload)=>{
+    return{
+        type : actionType.ADD_DISCUSSIONS_SUCCESS,
+        payload
+    }
+}
+
+
+const addDiscussionFailure = (error)=>{
+    return{
+        type : actionType.ADD_DISCUSSIONS_FAILURE,
+        payload : {
+            error : error
+        }
+    }
+}
+
+
 export const changeCountry = (payload)=>{
    
     return{
@@ -64,7 +94,6 @@ export const changeCountry = (payload)=>{
         payload 
     }
 }
-
 
 //GET DISCUSSIONS
 export const getDiscussions = (params = {}) => (dispatch) => {
@@ -80,13 +109,25 @@ export const getDiscussions = (params = {}) => (dispatch) => {
   };
 
 
+  
+//ADD DISCUSSIONS
+export const addDiscussions = (payload) => (dispatch) => {
+    dispatch(addDiscussionRequest());
+    return axios
+      .post("https://hidden-springs-42645.herokuapp.com/comments", payload)
+      .then((res) => {
+        dispatch(addDiscussionSuccess(res.data));
+      })
+      .catch((err) => dispatch(addDiscussionFailure(err)));
+  };
+
+
 //ADD COMMENTS
 export const addComments = (payload,id) => (dispatch) => {
   dispatch(addCommentsRequest());
   return axios
     .put(`https://hidden-springs-42645.herokuapp.com/comments/${id}`, payload)
     .then((res) => {
-      console.log(res);
       dispatch(addCommentsSuccess(res.data));
     })
     .catch((err) => dispatch(addCommentsFailure(err)));

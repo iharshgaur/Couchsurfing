@@ -30,7 +30,7 @@ function QuestionDetail() {
     };
     setQues(payload);
 
-    dispatch(addComments(payload, Number(id)));
+    dispatch(addComments(payload, id));
     dispatch(
       getDiscussions({
         country: ques.country,

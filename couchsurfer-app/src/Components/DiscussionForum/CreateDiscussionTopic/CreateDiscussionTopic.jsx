@@ -1,10 +1,33 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { v4 as uuid } from "uuid";
 import { useForm } from "react-hook-form";
+import { getCountry } from "../../../Redux/Country/action";
+import { addDiscussions } from "../../../Redux/Discussion/action";
 function CreateDiscussionTopic() {
-  const { country } = useParams();
+  const currentCountry = useSelector((state) => state.discussions.country);
+
+  const dispatch = useDispatch();
+  React.useEffect(() => {
+    dispatch(getCountry());
+  }, []);
+
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    const payload = {
+      id: uuid(),
+      country: currentCountry,
+      question: data.question,
+      topic: data.details,
+      discussions: [],
+      username: data.username,
+      city: data.city,
+    };
+    dispatch(addDiscussions(payload));
+  };
+
+  const countries = useSelector((state) => state.countries.countries);
+
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -13,13 +36,19 @@ function CreateDiscussionTopic() {
         <input name="username" ref={register({ required: true })} />
         <br />
         <br />
-        <label htmlFor="username">Name: </label>
+        <label htmlFor="city">City: </label>
         <br />
-        <select name="city" ref={register}>
-          <option value="Delhi">Delhi</option>
-          <option value="Mumbai">Mumbai</option>
-          <option value="Pune">Pune</option>
-        </select>
+        {countries?.map((country) =>
+          country.name === currentCountry ? (
+            <select name="city" ref={register} key={country.name}>
+              {country.cities.map((city) => (
+                <option value={city} key={city}>
+                  {city}
+                </option>
+              ))}
+            </select>
+          ) : null
+        )}
         <br />
         <br />
         <label htmlFor="question">Question: </label>
