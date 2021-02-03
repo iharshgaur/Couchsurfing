@@ -1,9 +1,11 @@
 import { combineReducers, createStore, applyMiddleware, compose } from "redux";
 
 import { discussionReducer } from "./Discussion/reducer";
+import { authReducer } from "./Users/authReducer";
 
 const reducers = combineReducers({
-    discussions : discussionReducer
+  discussions: discussionReducer,
+  auth: authReducer,
 });
 
 const customMiddleware = (store) => (next) => (action) => {
