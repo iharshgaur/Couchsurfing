@@ -1,7 +1,24 @@
+.countryList__cities, .countryList__country{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.countryList__country{
+    font-size: 70px;
+    padding-top: 50px;
+    font-weight: normal;
+
+}
+
 .countryList__wrapper{
     display: flex;
     flex-wrap: wrap;
 }
+
+
 .countryList__hostsCard{
     height: 500px;
     width: 25%;
@@ -12,6 +29,34 @@
 
 .countryList__head{
     border-bottom: 1px solid rgb(201, 199, 199);
-     padding: 0px 50px 10px;
+    padding: 0px 50px 10px;
+}
+
+.countryList__event{
+    background-color: white;
+    height: 80vh;
+    width: 1400px;
+    margin: 0px 65px;
+    /* border: 1px solid black; */
+    
+}
+
+.countryList__eventCard{
+    border: 1px solid gray;
+    display: flex;
+    width: 42%;
+    padding: 20px;
+    margin:20px 30px;
+}
+
+.countryList__join{
+    color: white;
+    border: 1px solid rgb(45, 133, 187);
+    width: 70%;
+    margin-top: 25px;
+    background-color: rgb(45, 133, 187);
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
 }
 
