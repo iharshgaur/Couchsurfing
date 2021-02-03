@@ -6,8 +6,9 @@ import Profile from "../Pages/Profile/Profile";
 import Question from "../Pages/Question/Question";
 import { LandingPage } from "../Components/LandingPage/LandingPage";
 import Country from "../Pages/countries/countries";
-
+import Dashboard from "../Pages/Dashboard/Dashboard";
 import Hosts from "../Pages/Hosts/Hosts";
+import Settings from "../Pages/Settings";
 function Routes() {
   return (
     <Switch>
@@ -23,14 +24,20 @@ function Routes() {
       <Route exact path="/discussions/:country/creatediscussion">
         <CreateDiscussion />
       </Route>
-      <Route path="/">
+      <Route exact path="/">
         <LandingPage />
       </Route>
-      <Route path="/country">
+      <Route exact path="/dashboard">
+        <Dashboard />
+      </Route>
+      <Route exact path="/country">
         <Country />
       </Route>
       <Route exact path="/hosts/:country">
-        <Hosts></Hosts>
+        <Hosts />
+      </Route>
+      <Route exact path="/settings">
+        <Settings />
       </Route>
     </Switch>
   );
