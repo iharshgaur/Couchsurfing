@@ -1,0 +1,134 @@
+.main__cont{
+    background-color: #F1EFEA;
+  
+}
+.main__cont__host__filter
+{
+    width:50%;
+    margin-left: 10vw;
+    background-color: white;
+   
+    /* margin-top: 2vh; */
+    color: #27374c;
+}
+.main__cont__host__filter__labels
+{
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+ margin: 3vh 1vh;
+}
+.main__cont__host__filter__labels > label{
+    margin: 10px 25px;
+   
+}
+.main__cont__host__filter__labels > label > input{
+    padding: 5px;
+}
+.main__cont__host__filter__labels > label > select{
+    width: 20vh;
+    padding: 7px 10px;
+}
+.main__cont__host__filter__buttons
+{
+    display: flex;
+    justify-content: flex-end;
+}
+.main__cont__host__filter__buttons > button{
+    padding: 10px 5px;
+    background-color: #287FB8;
+    margin: 1vh 5px;
+    color: white;
+    border: 0;
+}
+.more__filters
+{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #f9f9f9;
+    height: 10vh;
+    
+}.more__filters >div:nth-child(1)
+{
+    cursor: pointer;
+    color: #287FB8;
+}
+.main__cont__host__info
+{
+    width:50%;
+    margin-left: 10vw;
+    margin-top: 2vh;
+    background-color: #F1EFEA;
+    
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.main__cont__host__info> div
+{
+    margin: 2vh;
+    width: 45%;
+    min-height: 48vh;
+    background-color:white;
+    border-radius: 5px;
+    border-bottom: 1px solid grey;
+}
+.main__cont__host__info__person__imgInfo
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+
+}
+.main__cont__host__info__person__imgInfo img{
+    width:110%;
+    height: 90%;
+}
+.main__cont__host__info__person__imgInfo > div{
+    margin: 1vh;
+    width:40%;
+}
+.person__info >h4 {
+ margin: 0;
+ padding: 0;
+}
+.person__info > h6{
+    margin-top: 4px;
+    color:#929dad;
+    
+ padding: 0;
+}
+.person__info > p{
+    padding: 5px;
+    margin-top:-2vh;
+    
+    word-wrap: break-word;
+    font-size: 13px;
+}
+.person__info__desc
+{
+    padding: 10px;
+    word-wrap: break-word;
+}
+.main__cont__host__headers  span
+{
+    display: inline-block;
+    margin: 1vh 2vh;
+    cursor: pointer;
+    padding: 1vh;
+   
+    
+}
+.main__cont__host__travel__headers
+{
+    border-bottom: 2px solid #ED6504;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    color:#ED6504;
+    cursor: pointer;
+}
