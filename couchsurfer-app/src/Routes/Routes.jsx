@@ -15,10 +15,10 @@ function Routes() {
       <Route exact path="/profile">
         <Profile />
       </Route>
-      <Route exact path="/discussions">
+      <Route exact path="/discussions/:country">
         <Discussions />
       </Route>
-      <Route exact path="/question/:id">
+      <Route exact path="/discussions/:country/question/:id">
         <Question />
       </Route>
       <Route exact path="/discussions/:country/creatediscussion">
