@@ -6,7 +6,7 @@ function Discussions() {
   const dispatch = useDispatch();
 
   React.useEffect(() => {
-    dispatch(changeCountry("India"));
+    dispatch(changeCountry("USA"));
   }, [dispatch]);
 
   return (

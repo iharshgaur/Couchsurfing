@@ -35,7 +35,6 @@ export const changeCountry = (payload)=>{
 
 export const getDiscussions = (params = {}) => (dispatch) => {
     dispatch(getDiscussionsRequest());
-   
     return axios
       .get("https://hidden-springs-42645.herokuapp.com/comments", {
         params
