@@ -4,9 +4,11 @@ import { v4 as uuid } from "uuid";
 import { useForm } from "react-hook-form";
 import { getCountry } from "../../../Redux/Country/action";
 import { addDiscussions } from "../../../Redux/Discussion/action";
+import { useHistory, useParams } from "react-router-dom";
 function CreateDiscussionTopic() {
-  const currentCountry = useSelector((state) => state.discussions.country);
-
+  const { country } = useParams();
+  const currentCountry = country;
+  const history = useHistory();
   const dispatch = useDispatch();
   React.useEffect(() => {
     dispatch(getCountry());
@@ -24,6 +26,7 @@ function CreateDiscussionTopic() {
       city: data.city,
     };
     dispatch(addDiscussions(payload));
+    history.push(`/discussions/${currentCountry}`);
   };
 
   const countries = useSelector((state) => state.countries.countries);

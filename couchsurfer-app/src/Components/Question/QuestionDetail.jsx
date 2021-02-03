@@ -7,17 +7,20 @@ import { v4 as uuid } from "uuid";
 import { getDiscussions } from "../../Redux/Discussion/action";
 
 function QuestionDetail() {
+  React.useEffect(() => {
+    setQues(alldiscussions.find((discussion) => discussion.id === id));
+  }, []);
   const [comment, setComment] = React.useState("");
   const [ques, setQues] = React.useState({});
+
   const username = "Default";
   const dispatch = useDispatch();
   const { id } = useParams();
+
+  console.log(id);
   const alldiscussions = useSelector(
     (state) => state.discussions.alldiscussions
   );
-  React.useEffect(() => {
-    setQues(alldiscussions.find((discussion) => discussion.id === id));
-  }, [alldiscussions, id]);
 
   const HandlePostComment = () => {
     const payload = {
@@ -37,7 +40,7 @@ function QuestionDetail() {
       })
     );
   };
-
+  console.log(ques);
   return (
     <div className={styles.QuestionDetail}>
       <div className={styles.QuestionDetail__Header}>

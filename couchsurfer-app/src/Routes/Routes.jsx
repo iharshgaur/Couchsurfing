@@ -7,18 +7,19 @@ import Question from "../Pages/Question/Question";
 import { LandingPage } from "../Components/LandingPage/LandingPage";
 import Country from "../Pages/countries/countries";
 import Dashboard from "../Pages/Dashboard/Dashboard";
-import Hosts from "../Pages/Hosts/Hosts";
 import Settings from "../Pages/Settings";
+
+import Hosts from "../Pages/Hosts/Hosts";
 function Routes() {
   return (
     <Switch>
       <Route exact path="/profile">
         <Profile />
       </Route>
-      <Route exact path="/discussions">
+      <Route exact path="/discussions/:country">
         <Discussions />
       </Route>
-      <Route exact path="/question/:id">
+      <Route exact path="/discussions/:country/question/:id">
         <Question />
       </Route>
       <Route exact path="/discussions/:country/creatediscussion">
@@ -28,9 +29,12 @@ function Routes() {
         <LandingPage />
       </Route>
       <Route exact path="/dashboard">
-        <Dashboard />
+        <Dashboard></Dashboard>
       </Route>
-      <Route exact path="/country">
+      <Route exact path="/settings">
+        <Settings></Settings>
+      </Route>
+      <Route path="/country/:country">
         <Country />
       </Route>
       <Route exact path="/hosts/:country">
@@ -38,6 +42,9 @@ function Routes() {
       </Route>
       <Route exact path="/settings">
         <Settings />
+      </Route>
+      <Route>
+        <p>error 404 : page not found</p>
       </Route>
     </Switch>
   );

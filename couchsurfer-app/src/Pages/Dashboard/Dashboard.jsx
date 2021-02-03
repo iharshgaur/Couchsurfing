@@ -1,44 +1,38 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import "../../Components/Dashboard/Dashboard.css";
 import Navbar from "../../Components/Navbar/Navbar";
+
 const Dashboard = () => {
+  const history = useHistory();
+
+  const handleCountry = (country) => {
+    history.push(`/country/${country}`);
+  };
   return (
     <>
       <Navbar />
       <div className="dashboard__container">
         <div className="dashboard__container__left">
           <div>
-            <div>
-              {" "}
-              <h3>Arshad Ali</h3>
-              <p>Muradabad, Uttar Pradesh, India</p>
-            </div>
-            <div className="dashboard__container__left__hr"></div>
-            <div>
-              <select>
-                <option value="">Accepting Guest</option>
-                <option value="">Maybe Accepting Guest</option>
-                <option value=""> Accepting Guest</option>
-              </select>
-            </div>
+            <h3>India</h3>
+            <p>600+ hosts</p>
           </div>
           <div>
-            <h3>MY PROFILE</h3>
-            <div className="dashboard__container__left__hr"></div>
-            <div className="dashboard__container__left__graph">
-              <img src="https://i.imgur.com/gx5qf6i.png" alt="logo" />
-            </div>
-            <h5>Complete My Profile</h5>
+            <h3>USA</h3>
+            <p>100+ hosts</p>
           </div>
           <div>
-            <p>
-              Find my Facebook friends <br /> on Couchsurfing:
-            </p>
-            <button>
-              <img src="https://i.imgur.com/i1d8pPG.png" alt="facebook" />
-            </button>
+            <h3>Germany</h3>
+            <p>1600+ hosts</p>
           </div>
         </div>
+        <div className="dashboard__container__right__search">
+          <p>Find hosts wherever I’m going:</p>{" "}
+          <input type="text" placeholder="Where are you going?" />
+        </div>
+      </div>
+      <div className="dashboard__container__right">
         <div>
           <div className="dashboard__container__right">
             <div>
@@ -49,15 +43,15 @@ const Dashboard = () => {
               </div>
               <div className="dashboard__container__right__hr"></div>
               <div className="dashboard__container__right_image">
-                <div>
+                <div onClick={() => handleCountry("India")}>
                   <h3>India</h3>
                   <p>600+ hosts</p>
                 </div>
-                <div>
+                <div onClick={() => handleCountry("USA")}>
                   <h3>USA</h3>
                   <p>100+ hosts</p>
                 </div>
-                <div>
+                <div onClick={() => handleCountry("Germany")}>
                   <h3>Germany</h3>
                   <p>1600+ hosts</p>
                 </div>
