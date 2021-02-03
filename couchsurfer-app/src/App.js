@@ -1,14 +1,10 @@
-
-
 import './App.css';
 import Routes from './Routes/Routes';
 import './App.css';
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Routes/>
     </div>
   );
 }
-
-export default App;
