@@ -4,10 +4,12 @@ import Account from '../Components/Settings/Account';
 import { Link } from "react-router-dom"
 import Membership from "../Components/Settings/Membership"
 import Group from '../Components/Settings/Group';
+import Navbar from '../Components/Navbar/Navbar';
 const Settings = () => {
     const [component, setComponent] = React.useState("account");
     return (
-        
+        <>
+        <Navbar></Navbar>
         <div className={styles.AccountSetting}>
              <h2>{`Account & Settings`}</h2>
             <div className={styles.settingContainer}>
@@ -25,7 +27,8 @@ const Settings = () => {
                 
             </div>
            
-        </div>
+            </div>
+        </>
     )
 }
 
