@@ -7,6 +7,7 @@ import Question from "../Pages/Question/Question";
 import { LandingPage } from "../Components/LandingPage/LandingPage";
 import Country from "../Pages/countries/countries";
 
+import Hosts from "../Pages/Hosts/Hosts";
 function Routes() {
   return (
     <Switch>
@@ -27,6 +28,9 @@ function Routes() {
       </Route>
       <Route path="/country">
         <Country />
+      </Route>
+      <Route exact path="/hosts/:country">
+        <Hosts></Hosts>
       </Route>
     </Switch>
   );

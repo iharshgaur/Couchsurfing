@@ -1,27 +1,42 @@
 import React from "react";
+<<<<<<< HEAD
 // import { SignUpEmail } from "../SignUpEmail/SignUpEmail";
 // import { SignUpFaster } from "../SignUpFaster/SignUpFaster";
+=======
+import { useDispatch } from "react-redux";
+import { login } from "../../Redux/Users/action";
+import { SignUpEmail } from "../SignUpEmail/SignUpEmail";
+import { SignUpFaster } from "../SignUpFaster/SignUpFaster";
+>>>>>>> origin/userAuth
 
 import styles from "./LoginPage.module.css";
 
 
 
 const LoginDetails = () => {
+  const [username, setUsername] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const dispatch = useDispatch();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(login({ username, password}));
+
+  }
   return (
     
     <div className={styles.loginPage__opacity }>
     
     <div className={styles.loginPage__form}>
-    <form >
+    <form  onSubmit={handleSubmit}>
         <h2 className={styles.loginPage__line}>Log in to Couchsurfing</h2>
 
         
 
-        <input type="text" placeholder="Email or Username" className={styles.loginPage__input}/>
+        <input type="text" onChange={(e)=>setUsername(e.target.value)} placeholder="Email or Username" className={styles.loginPage__input}/>
         <br/>
         <br/>
 
-        <input type="password" placeholder="Password" className={styles.loginPage__input}/>
+        <input type="password" onChange={(e)=>setPassword(e.target.value)} placeholder="Password" className={styles.loginPage__input}/>
         <br/>
         
         <input type="checkbox" className={styles.loginPage__check}/> 
@@ -30,7 +45,7 @@ const LoginDetails = () => {
         <span className={styles.loginPage__forgot}>Forgot password?</span>
         <br/>
 
-        <button className={styles.loginPage__login}>Log In</button>
+        <button onClick={handleSubmit} className={styles.loginPage__login}>Log In</button>
         <br/>
         <br/>
 

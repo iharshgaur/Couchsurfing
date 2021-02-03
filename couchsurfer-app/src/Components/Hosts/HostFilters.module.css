@@ -1,0 +1,33 @@
+.main__cont{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    color:#27374c;
+}
+.main__cont__host__info
+{
+    padding: 10px;
+    border-right: 1px solid grey;
+    margin:1vh;
+
+}
+.main__cont__accomodations
+{
+    border-right: 1px solid grey;
+    padding: 10px;
+    margin: 1vh;
+    overflow-wrap: break-word;
+}
+.main__cont__preferences{
+    border-right: 1px solid grey;
+    padding: 10px;
+    margin: 1vh;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+.main__cont__preference__keyword input
+{
+    padding: 10px 3px;   
+}
