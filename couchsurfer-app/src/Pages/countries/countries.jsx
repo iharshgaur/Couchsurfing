@@ -7,7 +7,7 @@ import {changeCountry} from "../../Redux/Discussion/action"
   const dispatch = useDispatch();
 
   React.useEffect(() => {
-    dispatch(changeCountry("India"));
+    dispatch(changeCountry("USA"));
   }, [dispatch]);
 
   return (
