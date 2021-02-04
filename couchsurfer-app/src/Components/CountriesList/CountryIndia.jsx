@@ -1,15 +1,11 @@
 import React from "react";
 import styles from "./CountryList.module.css";
 import DiscussionForum from "../DiscussionForum/DiscussionForum";
+import { useHistory } from "react-router-dom";
 
 // const CountryIndia = ({ countryName, cityList,hostCountriesList }) => {
 const CountryIndia = ({ countryName, cityList, count }) => {
-  // const [count , setCount] = React.useState(0)
-
-  //   React.useEffect(()=>{
-  //           setCount( hostCountriesList?.filter((country_item)=>countryName === country_item.country).length)
-  //   },[count])
-
+  const history = useHistory();
   return (
     <div>
       <div
@@ -145,6 +141,7 @@ const CountryIndia = ({ countryName, cityList, count }) => {
                 fontSize: "15px",
                 fontWeight: "bold",
               }}
+              onClick={() => history.push(`/hosts/${countryName}`)}
             >
               Find a Host
             </button>
