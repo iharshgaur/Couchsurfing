@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from "./HostFilters.module.css"
+import {useDispatch} from "react-redux"
+import * as actionFunc from "../../Redux/Hosts/action"
 const rooms=[ "Private room",
     "Public room",
     "Shared room",
@@ -11,13 +13,51 @@ const prefrences_filters=["Kids at Home",
     "Pet Friendly",
     "Wheelchair Accessible",]
 const HostFilters = () => {
+    const dispatch = useDispatch()
+    const[details,setDetails]=React.useState({
+        haveReference:false,
+        isAcceptingGuests:false,
+        whichCity:"",
+        languageSpoken:""
+
+    })
+    const handleChange=(e)=>{
+        const{name,type,value,checked}=e.target
+        const val=type==="checkbox"?checked:value
+        setDetails({...details,[name]:val})
+    }
+    const{haveReference,isAcceptingGuests,whichCity,languageSpoken}=details
+    const handleSubmit=(e)=>{
+        e.preventDefault()
+    
+        if(haveReference)
+        {
+            dispatch(actionFunc.getFilterByRefrences())
+        }
+        if(isAcceptingGuests)
+        {
+            dispatch(actionFunc.getFilterByAcceptingGuests())
+        }
+        if(languageSpoken!=="")
+        {
+           
+            dispatch(actionFunc.getFilterByLanguage(languageSpoken))
+        }
+        if(whichCity!=="")
+        {
+           
+            dispatch(actionFunc.getFilterByCity(whichCity))
+        }
+    }
+    
     return (
+        <form onSubmit={handleSubmit}>
         <div className={styles.main__cont}>
             <div className={styles.main__cont__host__info}>
                 <p>HOST INFO</p>
                 <div>
                     <label>
-                        <input type="checkbox"/>
+                        <input onChange={handleChange} name="haveReference" checked={haveReference} type="checkbox"/>
                         Have References
                     </label>
                     <br/>
@@ -32,8 +72,8 @@ const HostFilters = () => {
                     </label>
                     <br/>
                     <label>
-                        <input type="checkbox"/>
-                        Maybe Accepting Guests
+                        <input onChange={handleChange} name="isAcceptingGuests" checked={isAcceptingGuests} type="checkbox"/>
+                        Accepting Guest
                     </label>
                     <br/>
                     <label>
@@ -84,7 +124,13 @@ const HostFilters = () => {
                     <br></br>
                     <label>
                        Languages Spoken<br></br>
-                        <input placeholder="example:German" />
+                        <input onChange={handleChange} value={languageSpoken} name="languageSpoken" placeholder="example:German" />
+                    </label>
+                    <br></br>
+                    <br></br>
+                    <label>
+                       City<br></br>
+                        <input onChange={handleChange} value={whichCity} name="whichCity" placeholder="example:German" />
                     </label>
                     <br></br>
                     <br/>
@@ -166,6 +212,8 @@ const HostFilters = () => {
 
             </div>
         </div>
+        <input className={styles.submit__btn} type="submit" value="Search"/>
+        </form>
     )
 }
 
