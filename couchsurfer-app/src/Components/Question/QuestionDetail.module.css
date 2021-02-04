@@ -1,5 +1,71 @@
 .QuestionDetail {
-  width: 90%;
+  width: 60%;
   border: 1px solid #ccc;
-  margin: 0 auto;
+  margin: 100px auto;
+  background-color: #fff;
+  padding: 10px;
+}
+.QuestionDetail__Header {
+  text-align: center;
+}
+.QuestionDetail__Header > h3 {
+  font-size: 25px;
+}
+.QuestionDetail__Header > p {
+  color: coral;
+}
+.QuestionDetail__Detail > div {
+  padding: 20px;
+}
+.QuestionDetail__Seeker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.QuestionDetail__Seeker > div {
+  width: 70%;
+}
+.QuestionDetail__Seeker > div > h3 {
+  color: #2d85bb;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+.QuestionDetail__Seeker > div > p {
+  color: green;
+}
+.QuestionDetail__Seeker > img {
+  border-radius: 100%;
+  width: 20%;
+}
+.QuestionDetail__Detail__Add__Comments {
+  display: flex;
+  align-items: center;
+}
+.QuestionDetail__Detail__Add__Comments > input {
+  height: 41px;
+  width: 85%;
+  border: 1px solid #ccc;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-right: none;
+  outline: none;
+}
+.QuestionDetail__Detail__Add__Comments > button {
+  height: 45px;
+  width: 15%;
+  border-left: none;
+  border: none;
+  background-color: #2d85bb;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.QuestionDetail__Detail__Comments {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+.QuestionDetail__Detail__Comments__Head > h1 {
+  text-align: center;
 }
