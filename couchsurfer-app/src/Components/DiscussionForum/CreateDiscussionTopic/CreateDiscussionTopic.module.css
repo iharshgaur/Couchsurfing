@@ -1,0 +1,43 @@
+.CreateDiscussionTopic {
+  background-color: white;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 10%;
+  padding: 20px;
+}
+.CreateDiscussionTopic > h1 {
+  text-align: center;
+}
+.CreateDiscussionTopic__Form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+.CreateDiscussionTopic__Form > label {
+  margin-right: 20px;
+}
+.CreateDiscussionTopic__Form > input {
+  height: 20px;
+  width: 50%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+.CreateDiscussionTopic__Form > select {
+  width: 50%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+  font-size: 15px;
+}
+.CreateDiscussionTopic__Form > .Submit {
+  height: 40px;
+  background-color: #2d85bb;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}

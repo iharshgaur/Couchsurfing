@@ -58,6 +58,8 @@
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   width: 100px;
+  border: 1px solid black;
+  border-left: none;
 }
 .DiscussionForum__Head__CreateDiscussion__Search > input {
   height: 36px;
