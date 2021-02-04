@@ -35,6 +35,23 @@ const putFailure = (err) => {
     err,
   };
 };
+const postRequest = () => {
+  return {
+    type: Actions.POST_EVENTS_REQUEST,
+  };
+};
+const postSuccess = (payload) => {
+  return {
+    type: Actions.POST_EVENTS_SUCCESS,
+    payload,
+  };
+};
+const postFailure = (err) => {
+  return {
+    type: Actions.POST_EVENTS_FAILURE,
+    err,
+  };
+};
 
 export const getEvents = () => (dispatch) => {
   dispatch(eventsRequest());
@@ -59,5 +76,17 @@ export const putEvents = (id, value) => (dispatch) => {
     })
     .catch((err) => {
       dispatch(putFailure(err));
+    });
+};
+export const postEvents = (payload) => (dispatch) => {
+  dispatch(postRequest());
+  return axios
+    .post(`https://json-server-bravo-ar.herokuapp.com/posts`, payload)
+    .then((res) => {
+      dispatch(postSuccess(res.data));
+      dispatch(getEvents());
+    })
+    .catch((err) => {
+      dispatch(postFailure(err));
     });
 };
