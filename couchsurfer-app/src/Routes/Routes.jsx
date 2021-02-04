@@ -8,6 +8,7 @@ import { LandingPage } from "../Components/LandingPage/LandingPage";
 import Country from "../Pages/countries/countries";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import Settings from "../Pages/Settings";
+import Events from "../Pages/Events/Events"
 
 import Hosts from "../Pages/Hosts/Hosts";
 function Routes() {
@@ -31,6 +32,10 @@ function Routes() {
       <Route exact path="/dashboard">
         <Dashboard></Dashboard>
       </Route>
+      <Route exact path="/events">
+        <Events></Events>
+      </Route>
+
       <Route exact path="/settings">
         <Settings></Settings>
       </Route>

@@ -1,0 +1,226 @@
+.Events__container {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+body {
+  background-color: #f1efea;
+}
+.Events__container__left > div {
+  height: 180px;
+  width: 300px;
+  background-color: #ffffff;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 0 rgb(163, 163, 163);
+}
+.Events__container__left > div:first-child {
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  line-height: 20px;
+}
+.Events__container__left__hr {
+  width: 300px;
+  border-bottom: 1px solid grey;
+}
+.Events__container__left > div > div > select {
+  width: 80%;
+  height: 50px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.Events__container__left > div:nth-child(2) > h3 {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.Events__container__left__graph {
+  display: flex;
+  margin: 10px;
+}
+.Events__container__left > div:nth-child(2) > h5 {
+  padding-left: 72px;
+  margin-top: -2px;
+  font-size: 16px;
+  color: #667fb8;
+}
+.Events__container__left > div:nth-child(2) {
+  height: 50px;
+}
+.Events__container__left > div:nth-child(2) > h3 {
+  margin-top: -5px;
+  margin-left: -15px;
+}
+.Events__container__left > div:nth-child(3) > p {
+  padding: 20px;
+}
+.Events__container__right {
+  height: 400px;
+  background-color: #ffffff;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 0 rgb(163, 163, 163);
+  overflow: hidden;
+}
+.Events__container__right > div > h4 {
+  margin-left: 50px;
+}
+.Events__container__right__hr {
+  border-bottom: 1px solid grey;
+}
+.Events__container__right_image {
+  display: flex;
+  margin: 10px;
+  justify-content: space-around;
+}
+.Events__container__right_image > div {
+  width: 30%;
+  height: 200px;
+  margin: 10px;
+  image-resolution: initial;
+  background-position: center;
+  background-size: 100mm;
+  color: #ffffff;
+  text-align: center;
+}
+.Events__container__right_image > div:nth-child(2) {
+  width: 60%;
+  color: rgb(44, 44, 44);
+}
+
+.Events__container__right__search {
+  text-align: center;
+}
+.Events__container__right__search > input {
+  width: 350px;
+  height: 35px;
+  border-radius: 20px;
+  outline: none;
+  border: 1px solid grey;
+  font-size: 16px;
+}
+.Events__container__right__logo {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.Events__container__right__logo > h4 {
+  margin-left: 10px;
+}
+.Events__container__right__logo__plans {
+  display: flex;
+  align-items: center;
+  background-color: #f7f7f7;
+  justify-content: center;
+  height: 200px;
+}
+.Events__container__right__logo__plans > p {
+  text-align: center;
+}
+.Events__container__right__logo__plans__links {
+  display: flex;
+  justify-content: space-around;
+  height: 150px;
+  align-items: center;
+}
+.Events__container__right__logo__plans__links > p {
+  color: #3b5998;
+  font-weight: 500;
+}
+.Events__container__right__logo__plans__links > p:hover {
+  color: orangered;
+  cursor: pointer;
+}
+.Navbar__linksDiv__settings {
+  height: 100px;
+  width: 150px;
+  position: fixed;
+  top: 80px;
+  right: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+.p2 {
+  color: black;
+  font-size: 18px;
+}
+.Events__container__right__social > div {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.Events__container__right__social > div > img {
+  margin-left: 10px;
+}
+.Events__container__right__join {
+  margin: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Events__container__right__join > button {
+  height: 40px;
+  width: 150px;
+  background-color: #287fb8;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  color: #f7f7f7;
+  font-size: 17px;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+.Events__container__right__join > button:hover {
+  background-color: #0471b9;
+}
+.Events__container__left__createEvent {
+  display: flex;
+  align-items: center;
+}
+.Events__container__left__createEvent > img {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.Events__container__left__createEvent__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Events__container__left__createEvent__button > button {
+  background-color: #3b5998;
+  height: 40px;
+  width: 80%;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  color: #f7f7f7;
+  font-size: 17px;
+}
+.Events__container__left__createEvent__button > button:hover {
+  background-color: #083697;
+}
+.Events__container__left__Joined > div {
+  text-align: center;
+}
+.Events__container__left__Joined > div:first-child > h3 {
+  padding: 20px;
+  padding-bottom: 0;
+}
+.Events__container__left__Joined > div:nth-child(3) > button {
+  background-color: orangered;
+  margin-top: 5px;
+  height: 40px;
+  width: 80%;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  color: #f7f7f7;
+  font-size: 17px;
+}
+.Events__container__left__Joined > div:nth-child(3) > button:hover {
+  background-color: rgb(175, 48, 2);
+}

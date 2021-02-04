@@ -2,13 +2,15 @@ import { combineReducers, createStore, applyMiddleware, compose } from "redux";
 import { countryReducer } from "./Country/reducer";
 import { discussionReducer } from "./Discussion/reducer";
 import { authReducer } from "./Users/authReducer";
-import hostReducer from "./Hosts/reducer"
+import hostReducer from "./Hosts/reducer";
+import { eventsReducer } from "./Events/authReducer";
 
 const reducers = combineReducers({
-    discussions : discussionReducer,
-    countries : countryReducer,
-    auth: authReducer,
-    hosts : hostReducer
+  discussions: discussionReducer,
+  countries: countryReducer,
+  auth: authReducer,
+  hosts: hostReducer,
+  events: eventsReducer,
 });
 
 const customMiddleware = (store) => (next) => (action) => {
