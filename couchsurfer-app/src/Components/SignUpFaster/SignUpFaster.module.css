@@ -1,23 +1,27 @@
 .SignUpFaster__background {
     background-color: white;
-    /* width: fit-content; */
+    width: fit-content;
     padding: 60px 50px 80px 50px;
     border-radius: 5px;
     /* margin-left: 200px; */
     height: 150px;
-    margin-right: 50px;
+    margin-left: 45%;
     margin-top: 100px;
+    /* margin-right: 2%; */
+   
     /* position: relative; */
   }
   .SignUpFaster__line1 {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
   
   .SignUpFaster__fb {
-    width: 200px;
+    width: 100%;
     text-decoration: none;
     background-color: #3b5998;
     color: white;
+    font-weight: bold;
+    font-size: large;
     padding: 10px 50px 10px 50px;
   }
   

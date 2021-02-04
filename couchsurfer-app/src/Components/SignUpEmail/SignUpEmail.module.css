@@ -1,9 +1,10 @@
 .signUpEmail__background {
     background-color: white;
     /* padding: 60px; */
-    margin-left: 50px;
+    margin-left: 3%;
     margin-top: 50px;
     border-radius: 5px;
+    width: 55%;
     /* position: relative; */
   }
   
@@ -26,18 +27,18 @@
   .signUpEmail__label > input {
     padding: 10px;
     border: 1px solid rgb(206, 204, 204);
-    width: 120px;
+    width: 70%;
   }
   
   .signUpEmail__background > form > div:nth-of-type(3),
   .signUpEmail__background > form > div:nth-of-type(4) {
     padding: 20px 0px 0px 0px;
-    margin-left: -170px;
+    margin-left: -37%;
   }
   
   .signUpEmail__background > form > div:nth-of-type(3) input,
   .signUpEmail__background > form > div:nth-of-type(4) input {
-    width: 290px;
+    width: 180%;
     padding: 15px;
   }
   

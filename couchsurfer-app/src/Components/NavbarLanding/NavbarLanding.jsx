@@ -40,7 +40,7 @@ const NavbarLanding = () => {
         </li>
 
         <li>
-          <div>How It Works</div>
+          <div style={{width:"100%"}}>How It Works</div>
         </li>
 
         <li>

@@ -8,13 +8,7 @@ const SignUpFaster = () => {
       <h3 className={styles.SignUpFaster__line1}>Sign Up Faster With</h3>
 
       <div>
-        {/* <Link
-          to="https://www.facebook.com/login"
-          className={styles.SignUpFaster__fb}
-        >
-          Facebook
-        </Link> */
-        }
+          <button className={styles.SignUpFaster__fb}> Facebook</button>
         
       </div>
 

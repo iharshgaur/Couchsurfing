@@ -1,7 +1,17 @@
 import React from "react";
 import styles from "./CountryList.module.css";
 import DiscussionForum from "../DiscussionForum/DiscussionForum";
-const CountryIndia = ({ countryName, cityList }) => {
+
+// const CountryIndia = ({ countryName, cityList,hostCountriesList }) => {
+const CountryIndia = ({ countryName, cityList,count}) => {
+
+ 
+  // const [count , setCount] = React.useState(0)
+
+  //   React.useEffect(()=>{
+  //           setCount( hostCountriesList?.filter((country_item)=>countryName === country_item.country).length)            
+  //   },[count])
+
   return (
     <div>
       <div
@@ -18,6 +28,7 @@ const CountryIndia = ({ countryName, cityList }) => {
       >
         <h1 className={styles.countryList__country}>{countryName}</h1>
         <br />
+        <div style={{textAlign:"center"}}>
         {cityList?.map((country_item) =>
           countryName === country_item.name
             ? country_item.cities.map((city) => (
@@ -30,13 +41,15 @@ const CountryIndia = ({ countryName, cityList }) => {
 
         {/* <div style = {{backgroundColor:"black",opacity:"0.4", position:"absolute",width:"100%", height:"40vh", top:"0px", left:"0px"}}></div> */}
       </div>
+      </div>
 
       <div className={styles.countryList__wrapper}>
         <div className={styles.countryList__hostsCard}>
           <h2 className={styles.countryList__head}>Local Hosts</h2>
-          <p>Stay with one of the 672,389 hosts in India</p>
+          <p>Stay with one of the {count} hosts in {countryName}</p>
 
-          <div style={{ display: "flex", flexWrap: "wrap", margin: "30px" }}>
+
+          <div  className={styles.countryList__members}>
             <div>
               <img
                 src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80"
@@ -142,9 +155,9 @@ const CountryIndia = ({ countryName, cityList }) => {
         {/* card2 */}
         <div className={styles.countryList__hostsCard}>
           <h2 className={styles.countryList__head}> Upcoming Visitors</h2>
-          <p>Meet or Host some of the 795 visitors to India</p>
+          <p>Meet or Host some of the 795 visitors to {countryName}</p>
 
-          <div style={{ display: "flex", flexWrap: "wrap", margin: "30px" }}>
+          <div  className={styles.countryList__members}>
             <div>
               <img
                 src="https://t3.ftcdn.net/jpg/02/22/85/16/360_F_222851624_jfoMGbJxwRi5AWGdPgXKSABMnzCQo9RN.jpg"
@@ -253,7 +266,8 @@ const CountryIndia = ({ countryName, cityList }) => {
           <h2 className={styles.countryList__head}> Hangouts</h2>
           <p>76 members available to meet now</p>
 
-          <div style={{ display: "flex", flexWrap: "wrap", margin: "30px" }}>
+          {/* <div style={{ display: "flex", flexWrap: "wrap", margin: "30px" }}> */}
+          <div className={styles.countryList__members}> 
             <div>
               <img
                 src="https://media.istockphoto.com/photos/portrait-of-a-beautiful-young-indian-woman-picture-id917499044?k=6&m=917499044&s=612x612&w=0&h=lx17asXD4jaIlXrFgBdd8Tinl0oSe43K0All11IjKWY="
@@ -359,7 +373,8 @@ const CountryIndia = ({ countryName, cityList }) => {
         <div className={styles.countryList__wrapper}>
           <div className={styles.countryList__event}>
             <h1 className={styles.countryList__head}>Events</h1>
-            <div style={{ display: "flex", flexWrap: "wrap" }}>
+            {/* <div style={{ display: "flex", flexWrap: "wrap" }}> */}
+            <div className={styles.countryList__eventContainer}>
               <div className={styles.countryList__eventCard}>
                 <img
                   src="https://tcdn.couchsurfing.com/uyIeZRDu16O58qHClnLP3B6atVo=/130x130/smart/https://ht-cdn.couchsurfing.com/assets/event-picture-placeholder3.png"
@@ -372,7 +387,43 @@ const CountryIndia = ({ countryName, cityList }) => {
                 />
 
                 <div style={{ width: "50%" }}>
-                  <h3>Char Dham Yatra</h3>
+                  <h3>Event 1</h3>
+                  <p>Sat, May 1 at 10:19 AM IST</p>
+                  <button className={styles.countryList__join}>Join</button>
+                </div>
+              </div>
+
+              <div className={styles.countryList__eventCard}>
+                <img
+                  src="https://tcdn.couchsurfing.com/uyIeZRDu16O58qHClnLP3B6atVo=/130x130/smart/https://ht-cdn.couchsurfing.com/assets/event-picture-placeholder3.png"
+                  alt="logo"
+                  style={{
+                    margin: "10px 80px 10px 10px",
+                    width: "150px",
+                    height: "150px",
+                  }}
+                />
+
+                <div style={{ width: "50%" }}>
+                  <h3>Event 1</h3>
+                  <p>Sat, May 1 at 10:19 AM IST</p>
+                  <button className={styles.countryList__join}>Join</button>
+                </div>
+              </div>
+
+              <div className={styles.countryList__eventCard}>
+                <img
+                  src="https://tcdn.couchsurfing.com/uyIeZRDu16O58qHClnLP3B6atVo=/130x130/smart/https://ht-cdn.couchsurfing.com/assets/event-picture-placeholder3.png"
+                  alt="logo"
+                  style={{
+                    margin: "10px 80px 10px 10px",
+                    width: "150px",
+                    height: "150px",
+                  }}
+                />
+
+                <div style={{ width: "50%" }}>
+                  <h3>Event 1</h3>
                   <p>Sat, May 1 at 10:19 AM IST</p>
                   <button className={styles.countryList__join}>Join</button>
                 </div>
@@ -390,7 +441,7 @@ const CountryIndia = ({ countryName, cityList }) => {
                 />
 
                 <div style={{ width: "50%" }}>
-                  <h3>Cross Country Roadtrip</h3>
+                  <h3>Event 2</h3>
                   <p>Fri, Oct 1 at 12:00 AM IST</p>
                   <button className={styles.countryList__join}>Join</button>
                 </div>
@@ -408,7 +459,7 @@ const CountryIndia = ({ countryName, cityList }) => {
                 />
 
                 <div style={{ width: "50%" }}>
-                  <h3>"Holi" Safe Space Celebration in Goa</h3>
+                  <h3>Event 3</h3>
                   <p>Sat, Mar 27 at 9:00 PM UTC</p>
                   <button className={styles.countryList__join}>Join</button>
                 </div>
@@ -426,7 +477,7 @@ const CountryIndia = ({ countryName, cityList }) => {
                 />
 
                 <div style={{ width: "50%" }}>
-                  <h3>Cs Bangalore Biomonthly Meet Up</h3>
+                  <h3>Event 4</h3>
                   <p>Fri, Mar 5 at 7:30 PM IST</p>
                   <button className={styles.countryList__join}>Join</button>
                 </div>
