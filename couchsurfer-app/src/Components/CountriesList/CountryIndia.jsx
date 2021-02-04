@@ -56,9 +56,9 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                 src="https://www.abc.net.au/cm/rimage/12108300-3x4-xlarge.jpg?v=4"
                 alt="user"
                 style={{
-                  margin: "10px",
-                  width: "80px",
-                  height: "80px",
+                  margin: "13px",
+                  width: "60px",
+                  height: "60px",
                   borderRadius: "50%",
                 }}
               />
@@ -70,9 +70,9 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                 src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80"
                 alt="user"
                 style={{
-                  margin: "10px",
-                  width: "80px",
-                  height: "80px",
+                  margin: "13px",
+                  width: "60px",
+                  height: "60px",
                   borderRadius: "50%",
                 }}
               />
@@ -84,9 +84,9 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                 src="https://www.glenbardgps.org/wp-content/uploads/2019/03/Amy-morin.jpg"
                 alt="user"
                 style={{
-                  margin: "10px",
-                  width: "80px",
-                  height: "80px",
+                  margin: "13px",
+                  width: "60px",
+                  height: "60px",
                   borderRadius: "50%",
                 }}
               />
@@ -99,9 +99,9 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                 src="https://media.istockphoto.com/photos/portrait-of-a-beautiful-young-indian-woman-picture-id917499044?k=6&m=917499044&s=612x612&w=0&h=lx17asXD4jaIlXrFgBdd8Tinl0oSe43K0All11IjKWY="
                 alt="user"
                 style={{
-                  margin: "10px",
-                  width: "80px",
-                  height: "80px",
+                  margin: "13px",
+                  width: "60px",
+                  height: "60px",
                   borderRadius: "50%",
                 }}
               />
@@ -113,9 +113,9 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                 src="https://t3.ftcdn.net/jpg/02/22/85/16/360_F_222851624_jfoMGbJxwRi5AWGdPgXKSABMnzCQo9RN.jpg"
                 alt="user"
                 style={{
-                  margin: "10px",
-                  width: "80px",
-                  height: "80px",
+                  margin: "13px",
+                  width: "60px",
+                  height: "60px",
                   borderRadius: "50%",
                 }}
               />
@@ -128,9 +128,9 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                 src="https://i.pinimg.com/originals/ac/80/a4/ac80a426827b367175d81f905d5e04e4.jpg"
                 alt="user"
                 style={{
-                  margin: "10px",
-                  width: "80px",
-                  height: "80px",
+                  margin: "13px",
+                  width: "60px",
+                  height: "60px",
                   borderRadius: "50%",
                 }}
               />
@@ -166,9 +166,9 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                 src="https://t3.ftcdn.net/jpg/02/22/85/16/360_F_222851624_jfoMGbJxwRi5AWGdPgXKSABMnzCQo9RN.jpg"
                 alt="user"
                 style={{
-                  margin: "10px",
-                  width: "80px",
-                  height: "80px",
+                  margin: "13px",
+                  width: "60px",
+                  height: "60px",
                   borderRadius: "50%",
                 }}
               />
@@ -180,9 +180,9 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                 src="https://www.abc.net.au/cm/rimage/12108300-3x4-xlarge.jpg?v=4"
                 alt="user"
                 style={{
-                  margin: "10px",
-                  width: "80px",
-                  height: "80px",
+                  margin: "13px",
+                  width: "60px",
+                  height: "60px",
                   borderRadius: "50%",
                 }}
               />
@@ -194,9 +194,9 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                 src="https://i.pinimg.com/originals/ac/80/a4/ac80a426827b367175d81f905d5e04e4.jpg"
                 alt="user"
                 style={{
-                  margin: "10px",
-                  width: "80px",
-                  height: "80px",
+                  margin: "13px",
+                  width: "60px",
+                  height: "60px",
                   borderRadius: "50%",
                 }}
               />
@@ -208,9 +208,9 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                 src="https://www.glenbardgps.org/wp-content/uploads/2019/03/Amy-morin.jpg"
                 alt="user"
                 style={{
-                  margin: "10px",
-                  width: "80px",
-                  height: "80px",
+                  margin: "13px",
+                  width: "60px",
+                  height: "60px",
                   borderRadius: "50%",
                 }}
               />
@@ -222,9 +222,9 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                 src="https://media.istockphoto.com/photos/portrait-of-a-beautiful-young-indian-woman-picture-id917499044?k=6&m=917499044&s=612x612&w=0&h=lx17asXD4jaIlXrFgBdd8Tinl0oSe43K0All11IjKWY="
                 alt="user"
                 style={{
-                  margin: "10px",
-                  width: "80px",
-                  height: "80px",
+                  margin: "13px",
+                  width: "60px",
+                  height: "60px",
                   borderRadius: "50%",
                 }}
               />
@@ -236,9 +236,9 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                 src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80"
                 alt="user"
                 style={{
-                  margin: "10px",
-                  width: "80px",
-                  height: "80px",
+                  margin: "13px",
+                  width: "60px",
+                  height: "60px",
                   borderRadius: "50%",
                 }}
               />
@@ -248,7 +248,7 @@ const CountryIndia = ({ countryName, cityList,count}) => {
             <button
               style={{
                 backgroundColor: "#287FB8",
-                width: "50%",
+                width: "60%",
                 padding: "10px 20px",
                 margin: "50px auto",
                 border: "none",
@@ -271,17 +271,15 @@ const CountryIndia = ({ countryName, cityList,count}) => {
 
           {/* <div style={{ display: "flex", flexWrap: "wrap", margin: "30px" }}> */}
           <div className={styles.countryList__members}> 
-
-
           
           <div>
               <img
                 src="https://i.pinimg.com/originals/ac/80/a4/ac80a426827b367175d81f905d5e04e4.jpg"
                 alt="user"
                 style={{
-                  margin: "10px",
-                  width: "80px",
-                  height: "80px",
+                  margin: "13px",
+                  width: "60px",
+                  height: "60px",
                   borderRadius: "50%",
                 }}
               />
@@ -293,9 +291,9 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                 src="https://media.istockphoto.com/photos/portrait-of-a-beautiful-young-indian-woman-picture-id917499044?k=6&m=917499044&s=612x612&w=0&h=lx17asXD4jaIlXrFgBdd8Tinl0oSe43K0All11IjKWY="
                 alt="user"
                 style={{
-                  margin: "10px",
-                  width: "80px",
-                  height: "80px",
+                  margin: "13px",
+                  width: "60px",
+                  height: "60px",
                   borderRadius: "50%",
                 }}
               />
@@ -307,9 +305,9 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                 src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80"
                 alt="user"
                 style={{
-                  margin: "10px",
-                  width: "80px",
-                  height: "80px",
+                  margin: "13px",
+                  width: "60px",
+                  height: "60px",
                   borderRadius: "50%",
                 }}
               />
@@ -321,9 +319,9 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                 src="https://www.glenbardgps.org/wp-content/uploads/2019/03/Amy-morin.jpg"
                 alt="user"
                 style={{
-                  margin: "10px",
-                  width: "80px",
-                  height: "80px",
+                  margin: "13px",
+                  width: "60px",
+                  height: "60px",
                   borderRadius: "50%",
                 }}
               />
@@ -335,9 +333,9 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                 src="https://t3.ftcdn.net/jpg/02/22/85/16/360_F_222851624_jfoMGbJxwRi5AWGdPgXKSABMnzCQo9RN.jpg"
                 alt="user"
                 style={{
-                  margin: "10px",
-                  width: "80px",
-                  height: "80px",
+                  margin: "13px",
+                  width: "60px",
+                  height: "60px",
                   borderRadius: "50%",
                 }}
               />
@@ -350,9 +348,9 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                 src="https://www.abc.net.au/cm/rimage/12108300-3x4-xlarge.jpg?v=4"
                 alt="user"
                 style={{
-                  margin: "10px",
-                  width: "80px",
-                  height: "80px",
+                  margin: "13px",
+                  width: "60px",
+                  height: "60px",
                   borderRadius: "50%",
                 }}
               />
