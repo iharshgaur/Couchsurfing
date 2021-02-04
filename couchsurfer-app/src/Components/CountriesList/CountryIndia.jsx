@@ -50,20 +50,7 @@ const CountryIndia = ({ countryName, cityList,count}) => {
 
 
           <div  className={styles.countryList__members}>
-            <div>
-              <img
-                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80"
-                alt="user"
-                style={{
-                  margin: "10px",
-                  width: "80px",
-                  height: "80px",
-                  borderRadius: "50%",
-                }}
-              />
-              <p style={{ margin: "0px" }}>Lara</p>
-            </div>
-
+           
             <div>
               <img
                 src="https://www.abc.net.au/cm/rimage/12108300-3x4-xlarge.jpg?v=4"
@@ -80,6 +67,20 @@ const CountryIndia = ({ countryName, cityList,count}) => {
 
             <div>
               <img
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGVyc29ufGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80"
+                alt="user"
+                style={{
+                  margin: "10px",
+                  width: "80px",
+                  height: "80px",
+                  borderRadius: "50%",
+                }}
+              />
+              <p style={{ margin: "0px" }}>Lara</p>
+            </div>
+
+            <div>
+              <img
                 src="https://www.glenbardgps.org/wp-content/uploads/2019/03/Amy-morin.jpg"
                 alt="user"
                 style={{
@@ -90,6 +91,21 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                 }}
               />
               <p style={{ margin: "0px" }}>Priya</p>
+            </div>
+
+           
+            <div>
+              <img
+                src="https://media.istockphoto.com/photos/portrait-of-a-beautiful-young-indian-woman-picture-id917499044?k=6&m=917499044&s=612x612&w=0&h=lx17asXD4jaIlXrFgBdd8Tinl0oSe43K0All11IjKWY="
+                alt="user"
+                style={{
+                  margin: "10px",
+                  width: "80px",
+                  height: "80px",
+                  borderRadius: "50%",
+                }}
+              />
+              <p style={{ margin: "0px" }}>Geeta</p>
             </div>
 
             <div>
@@ -106,19 +122,6 @@ const CountryIndia = ({ countryName, cityList,count}) => {
               <p style={{ margin: "0px" }}>Ram</p>
             </div>
 
-            <div>
-              <img
-                src="https://media.istockphoto.com/photos/portrait-of-a-beautiful-young-indian-woman-picture-id917499044?k=6&m=917499044&s=612x612&w=0&h=lx17asXD4jaIlXrFgBdd8Tinl0oSe43K0All11IjKWY="
-                alt="user"
-                style={{
-                  margin: "10px",
-                  width: "80px",
-                  height: "80px",
-                  borderRadius: "50%",
-                }}
-              />
-              <p style={{ margin: "0px" }}>Geeta</p>
-            </div>
 
             <div>
               <img
@@ -147,7 +150,7 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                 fontWeight: "bold",
               }}
             >
-              Meet Travelers
+              Find a Host
             </button>
           </div>
         </div>
@@ -268,6 +271,23 @@ const CountryIndia = ({ countryName, cityList,count}) => {
 
           {/* <div style={{ display: "flex", flexWrap: "wrap", margin: "30px" }}> */}
           <div className={styles.countryList__members}> 
+
+
+          
+          <div>
+              <img
+                src="https://i.pinimg.com/originals/ac/80/a4/ac80a426827b367175d81f905d5e04e4.jpg"
+                alt="user"
+                style={{
+                  margin: "10px",
+                  width: "80px",
+                  height: "80px",
+                  borderRadius: "50%",
+                }}
+              />
+              <p style={{ margin: "0px" }}>Surya</p>
+            </div>
+
             <div>
               <img
                 src="https://media.istockphoto.com/photos/portrait-of-a-beautiful-young-indian-woman-picture-id917499044?k=6&m=917499044&s=612x612&w=0&h=lx17asXD4jaIlXrFgBdd8Tinl0oSe43K0All11IjKWY="
@@ -280,20 +300,6 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                 }}
               />
               <p style={{ margin: "0px" }}>Geeta</p>
-            </div>
-
-            <div>
-              <img
-                src="https://www.abc.net.au/cm/rimage/12108300-3x4-xlarge.jpg?v=4"
-                alt="user"
-                style={{
-                  margin: "10px",
-                  width: "80px",
-                  height: "80px",
-                  borderRadius: "50%",
-                }}
-              />
-              <p style={{ margin: "0px" }}>James</p>
             </div>
 
             <div>
@@ -338,9 +344,10 @@ const CountryIndia = ({ countryName, cityList,count}) => {
               <p style={{ margin: "0px" }}>Ram</p>
             </div>
 
+            
             <div>
               <img
-                src="https://i.pinimg.com/originals/ac/80/a4/ac80a426827b367175d81f905d5e04e4.jpg"
+                src="https://www.abc.net.au/cm/rimage/12108300-3x4-xlarge.jpg?v=4"
                 alt="user"
                 style={{
                   margin: "10px",
@@ -349,8 +356,10 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                   borderRadius: "50%",
                 }}
               />
-              <p style={{ margin: "0px" }}>Surya</p>
+              <p style={{ margin: "0px" }}>James</p>
             </div>
+
+
 
             <button
               style={{
@@ -365,7 +374,7 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                 fontWeight: "bold",
               }}
             >
-              Meet Travelers
+              Get the App
             </button>
           </div>
         </div>
