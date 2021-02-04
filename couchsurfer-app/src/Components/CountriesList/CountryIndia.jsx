@@ -3,13 +3,11 @@ import styles from "./CountryList.module.css";
 import DiscussionForum from "../DiscussionForum/DiscussionForum";
 
 // const CountryIndia = ({ countryName, cityList,hostCountriesList }) => {
-const CountryIndia = ({ countryName, cityList,count}) => {
-
- 
+const CountryIndia = ({ countryName, cityList, count }) => {
   // const [count , setCount] = React.useState(0)
 
   //   React.useEffect(()=>{
-  //           setCount( hostCountriesList?.filter((country_item)=>countryName === country_item.country).length)            
+  //           setCount( hostCountriesList?.filter((country_item)=>countryName === country_item.country).length)
   //   },[count])
 
   return (
@@ -28,29 +26,29 @@ const CountryIndia = ({ countryName, cityList,count}) => {
       >
         <h1 className={styles.countryList__country}>{countryName}</h1>
         <br />
-        <div style={{textAlign:"center"}}>
-        {cityList?.map((country_item) =>
-          countryName === country_item.name
-            ? country_item.cities.map((city) => (
-                <button key={city} className={styles.countryList__cities}>
-                  {city}
-                </button>
-              ))
-            : null
-        )}
+        <div style={{ textAlign: "center" }}>
+          {cityList?.map((country_item) =>
+            countryName === country_item.name
+              ? country_item.cities.map((city) => (
+                  <button key={city} className={styles.countryList__cities}>
+                    {city}
+                  </button>
+                ))
+              : null
+          )}
 
-        {/* <div style = {{backgroundColor:"black",opacity:"0.4", position:"absolute",width:"100%", height:"40vh", top:"0px", left:"0px"}}></div> */}
-      </div>
+          {/* <div style = {{backgroundColor:"black",opacity:"0.4", position:"absolute",width:"100%", height:"40vh", top:"0px", left:"0px"}}></div> */}
+        </div>
       </div>
 
       <div className={styles.countryList__wrapper}>
         <div className={styles.countryList__hostsCard}>
           <h2 className={styles.countryList__head}>Local Hosts</h2>
-          <p>Stay with one of the {count} hosts in {countryName}</p>
+          <p>
+            Stay with one of the {count} hosts in {countryName}
+          </p>
 
-
-          <div  className={styles.countryList__members}>
-           
+          <div className={styles.countryList__members}>
             <div>
               <img
                 src="https://www.abc.net.au/cm/rimage/12108300-3x4-xlarge.jpg?v=4"
@@ -93,7 +91,6 @@ const CountryIndia = ({ countryName, cityList,count}) => {
               <p style={{ margin: "0px" }}>Priya</p>
             </div>
 
-           
             <div>
               <img
                 src="https://media.istockphoto.com/photos/portrait-of-a-beautiful-young-indian-woman-picture-id917499044?k=6&m=917499044&s=612x612&w=0&h=lx17asXD4jaIlXrFgBdd8Tinl0oSe43K0All11IjKWY="
@@ -121,7 +118,6 @@ const CountryIndia = ({ countryName, cityList,count}) => {
               />
               <p style={{ margin: "0px" }}>Ram</p>
             </div>
-
 
             <div>
               <img
@@ -160,7 +156,7 @@ const CountryIndia = ({ countryName, cityList,count}) => {
           <h2 className={styles.countryList__head}> Upcoming Visitors</h2>
           <p>Meet or Host some of the 795 visitors to {countryName}</p>
 
-          <div  className={styles.countryList__members}>
+          <div className={styles.countryList__members}>
             <div>
               <img
                 src="https://t3.ftcdn.net/jpg/02/22/85/16/360_F_222851624_jfoMGbJxwRi5AWGdPgXKSABMnzCQo9RN.jpg"
@@ -270,11 +266,8 @@ const CountryIndia = ({ countryName, cityList,count}) => {
           <p>76 members available to meet now</p>
 
           {/* <div style={{ display: "flex", flexWrap: "wrap", margin: "30px" }}> */}
-          <div className={styles.countryList__members}> 
-
-
-          
-          <div>
+          <div className={styles.countryList__members}>
+            <div>
               <img
                 src="https://i.pinimg.com/originals/ac/80/a4/ac80a426827b367175d81f905d5e04e4.jpg"
                 alt="user"
@@ -344,7 +337,6 @@ const CountryIndia = ({ countryName, cityList,count}) => {
               <p style={{ margin: "0px" }}>Ram</p>
             </div>
 
-            
             <div>
               <img
                 src="https://www.abc.net.au/cm/rimage/12108300-3x4-xlarge.jpg?v=4"
@@ -358,8 +350,6 @@ const CountryIndia = ({ countryName, cityList,count}) => {
               />
               <p style={{ margin: "0px" }}>James</p>
             </div>
-
-
 
             <button
               style={{

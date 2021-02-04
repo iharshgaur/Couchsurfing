@@ -1,7 +1,7 @@
 .ProfileContainer {
   display: flex;
   width: 90%;
-  margin: 0 auto;
+  margin: 100px auto;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;

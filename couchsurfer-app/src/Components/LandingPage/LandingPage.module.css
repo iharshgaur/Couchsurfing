@@ -1,11 +1,11 @@
 .landingPage__background {
   background-color: rgb(45, 133, 187);
-  height: 110vh;
   width: 100%;
   position: relative;
   margin-top: 80px;
+  position: relative;
   text-align: center;
-  border: 1px solid black;
+  padding-bottom: 10px;
 }
 
 .landingPage__background > h1,
