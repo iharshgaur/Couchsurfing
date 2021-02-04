@@ -16,12 +16,12 @@ status: "false",
 const Dashboard = () => {
     const [detail, setDetail] = React.useState(obj);
     const data = useSelector(state => state.events.data);
+    const [filter, setFilter] = React.useState("All");
     const dispatch = useDispatch();
     const history = useHistory();
     const [popUp, setpopUp] = React.useState(false);
     React.useEffect(() => {
         dispatch(getEvents());
-        console.log(data);
     },[])
   const handleCountry = (country) => {
       history.push(`/country/${country}`);
@@ -78,13 +78,22 @@ const Dashboard = () => {
           </div>  )
             }          
         </div>
-        <div>
-           {data&&data?.map((e)=><div key={e.id} className="Events__container__right">
+              <div>
+                  <div className="Events__container__filter">
+                      <h3>Filter :</h3>
+                      <select onChange={(e) => setFilter(e.target.value)} >
+                      <option value="All">All</option>
+                          <option value="India">India</option>
+                          <option value="USA">USA</option>
+                          <option value="Germany">Germany</option>
+                      </select>
+                  </div>
+        {filter==="All"?data&&data?.map((e)=><div key={e.id} className="Events__container__right">
             <div>
               <div className="Events__container__right__logo">
                 {" "}
                 <img src="https://i.imgur.com/TkZ3kB9.png" alt="logo" />
-                       <h4> Envets : {e.country }</h4>
+                       <h4> Events : {e.country }</h4>
               </div>
               <div className="Events__container__right__hr"></div>
               <div className="Events__container__right_image">
@@ -113,7 +122,41 @@ const Dashboard = () => {
               </div>
                       </div>
             </div>
-   )
+   ):data&&data?.filter((e)=>e.country===filter).map((e)=><div key={e.id} className="Events__container__right">
+   <div>
+     <div className="Events__container__right__logo">
+       {" "}
+       <img src="https://i.imgur.com/TkZ3kB9.png" alt="logo" />
+              <h4> Events : {e.country }</h4>
+     </div>
+     <div className="Events__container__right__hr"></div>
+     <div className="Events__container__right_image">
+       <div onClick={() => handleCountry("India")}>
+                  <img style={{height:"100%" ,width:"100%"}}  src={e.url} alt={ e.url}/>
+       </div>
+       <div onClick={() => handleCountry("USA")}>
+                  <div>
+                      <h2>{e.title}</h2>
+                      <p>{e.location}</p>
+                      <p>{`From :${e.from}  To :${e.to}`}</p>
+                      <div className="Events__container__right__social">
+                          <h3>Share this event with your friends:</h3>
+                          <div> 
+                              <img src="https://i.imgur.com/5VzqqGF.png" alt="facebook" />
+                              <img src="https://i.imgur.com/VtwmpfL.png" alt="whatapp" />
+                              <img src="https://i.imgur.com/5wWrFuG.png" alt="Twitter"/>
+                          </div>
+                      </div>
+                  </div>
+       </div>
+       
+     </div>
+     <div className="Events__container__right__join">
+       {e.status=="false"?<button onClick={() => handleJoin(e.id)}>JOIN</button>:""}
+     </div>
+             </div>
+   </div>
+)
                       
             }
         </div>
