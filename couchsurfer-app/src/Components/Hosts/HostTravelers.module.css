@@ -1,6 +1,7 @@
 .main__cont{
     background-color: #F1EFEA;
-  
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 .main__cont__host__filter
 {
@@ -20,26 +21,30 @@
 }
 .main__cont__host__filter__labels > label{
     margin: 10px 25px;
+    word-wrap: break-word;
    
 }
 .main__cont__host__filter__labels > label > input{
-    padding: 5px;
+    padding: 3%;
+    width:11vw;
 }
 .main__cont__host__filter__labels > label > select{
-    width: 20vh;
-    padding: 7px 10px;
+    width: 13vw;
+    padding: 4% 3%;
 }
 .main__cont__host__filter__buttons
 {
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
 }
 .main__cont__host__filter__buttons > button{
-    padding: 10px 5px;
+    padding:2% 1%;
     background-color: #287FB8;
     margin: 1vh 5px;
     color: white;
     border: 0;
+    width:10vw;
 }
 .more__filters
 {
@@ -57,8 +62,9 @@
 }
 .main__cont__host__info
 {
-    width:50%;
-    margin-left: 10vw;
+    width:55%;
+   
+    margin-left: 7.8vw;
     margin-top: 2vh;
     background-color: #F1EFEA;
     
@@ -70,8 +76,8 @@
 }
 .main__cont__host__info> div
 {
-    margin: 2vh;
-    width: 45%;
+    margin: 1vh;
+    width: 25vw;
     min-height: 48vh;
     background-color:white;
     border-radius: 5px;
@@ -90,7 +96,7 @@
     height: 90%;
 }
 .main__cont__host__info__person__imgInfo > div{
-    margin: 1vh;
+    margin: 1.5vh;
     width:40%;
 }
 .person__info >h4 {
@@ -105,7 +111,7 @@
 }
 .person__info > p{
     padding: 5px;
-    margin-top:-2vh;
+    margin-top:-3vh;
     
     word-wrap: break-word;
     font-size: 13px;

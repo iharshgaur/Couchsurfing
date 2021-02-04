@@ -61,10 +61,11 @@ const HostTravelers = () => {
                         </select>
                     </label>
                 </div>
-                <div className={styles.main__cont__host__filter__buttons}>
-                    <button>CLEAR FILTERS</button>
-                    <button>SEARCH</button>
-                </div>
+                {!showFilters?
+                    <div className={styles.main__cont__host__filter__buttons}>
+                        <button>CLEAR FILTERS</button>
+                        <button>SEARCH</button>
+                    </div>:""}
                 <div>{showFilters?<HostFilters></HostFilters>:""}</div>
                 <div className={styles.more__filters}>
                     

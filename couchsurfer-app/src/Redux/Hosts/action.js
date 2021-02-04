@@ -32,3 +32,34 @@ const getHosts=(params={})=>(dispatch)=>{
     .catch(err=>dispatch(getHostsFailure()))
 }
 export default getHosts
+export const getFilterByLanguage=(payload)=>{
+    return (
+        {
+            type:todoActions.FILTER_BY_LANGUAGE,
+            payload
+        }
+    )
+}
+
+export const getFilterByRefrences=()=>{
+    return (
+        {
+            type:todoActions.FILTER_BY_REFRENCES
+        }
+    )
+}
+export const getFilterByAcceptingGuests=()=>{
+    return (
+        {
+            type:todoActions.FILTER_BY_ACCEPTING_GUESTS
+        }
+    )
+}
+export const getFilterByCity=(payload)=>{
+    return (
+        {
+            type:todoActions.FILTER_BY_CITY,
+            payload
+        }
+    )
+}
