@@ -9,6 +9,7 @@ import Country from "../Pages/countries/countries";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import Settings from "../Pages/Settings";
 import Events from "../Pages/Events/Events"
+import HostProfilePage from "../Pages/HostProfilePage/HostProfilePage"
 
 import Hosts from "../Pages/Hosts/Hosts";
 function Routes() {
@@ -47,6 +48,9 @@ function Routes() {
       </Route>
       <Route exact path="/settings">
         <Settings />
+      </Route>
+      <Route exact path="/hosts/:country/:hostId">
+        <HostProfilePage></HostProfilePage>
       </Route>
       <Route>
         <p>error 404 : page not found</p>

@@ -2,6 +2,7 @@ import React from 'react'
 import styles from "./HostFilters.module.css"
 import {useDispatch} from "react-redux"
 import * as actionFunc from "../../Redux/Hosts/action"
+import {useParams} from "react-router-dom"
 const rooms=[ "Private room",
     "Public room",
     "Shared room",
@@ -18,7 +19,8 @@ const HostFilters = () => {
         haveReference:false,
         isAcceptingGuests:false,
         whichCity:"",
-        languageSpoken:""
+        languageSpoken:"",
+        isVerified:false
 
     })
     const handleChange=(e)=>{
@@ -26,7 +28,7 @@ const HostFilters = () => {
         const val=type==="checkbox"?checked:value
         setDetails({...details,[name]:val})
     }
-    const{haveReference,isAcceptingGuests,whichCity,languageSpoken}=details
+    const{haveReference,isAcceptingGuests,whichCity,languageSpoken,isVerified}=details
     const handleSubmit=(e)=>{
         e.preventDefault()
     
@@ -48,9 +50,17 @@ const HostFilters = () => {
            
             dispatch(actionFunc.getFilterByCity(whichCity))
         }
+        if(isVerified)
+        {
+            dispatch(actionFunc.getFilterByVerified())
+        }
     }
-    
+ 
+    const handleReload=()=>{
+            window.location.reload()
+    }
     return (
+        <>
         <form onSubmit={handleSubmit}>
         <div className={styles.main__cont}>
             <div className={styles.main__cont__host__info}>
@@ -62,7 +72,7 @@ const HostFilters = () => {
                     </label>
                     <br/>
                     <label>
-                        <input type="checkbox"/>
+                        <input onChange={handleChange} name="isVerified" checked={isVerified} type="checkbox"/>
                         Are Verified
                     </label>
                     <br/>
@@ -212,8 +222,11 @@ const HostFilters = () => {
 
             </div>
         </div>
-        <input className={styles.submit__btn} type="submit" value="Search"/>
+        <input className={styles.submit__btn} type="submit" value="SEARCH"/>
         </form>
+        <button className={styles.submit__btn} onClick={handleReload} >CLEAR FILTERS</button>
+        </>
+
     )
 }
 

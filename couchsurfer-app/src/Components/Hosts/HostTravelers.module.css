@@ -3,7 +3,7 @@
     word-wrap: break-word;
     overflow-wrap: break-word;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
   
 }
@@ -74,7 +74,7 @@
 .main__cont__host__filter__buttons > button{
     padding:2% 1%;
     background-color: #287FB8;
-    margin: 1vh 5px;
+    margin: 1vh 2vh ;
     color: white;
     border: 0;
     width:10vw;
@@ -87,6 +87,7 @@
     align-items: center;
     background-color: #f9f9f9;
     height: 10vh;
+    padding-right: 2vw;
     
 }.more__filters >div:nth-child(1)
 {

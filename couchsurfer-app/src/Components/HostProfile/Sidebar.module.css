@@ -1,0 +1,46 @@
+.SidebarContainer {
+  height: 610px;
+  width: 20%;
+  border: 1px solid #ccc;
+  background-color: white;
+  margin-right: 10px;
+  padding: 20px;
+}
+
+.SidebarContainer__Top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.SidebarContainer__Top > * {
+  margin: 10px;
+}
+.SidebarContainer__Top > img {
+  width: 80%;
+  border-radius: 100%;
+}
+
+.SidebarContainer__Bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.SidebarContainer__Bottom > button {
+  height: 40px;
+  width: 100%;
+  margin-top: 20px;
+  border: none;
+  background-color: #41b866;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.SidebarContainer__Bottom__Headers > h4 {
+  color: grey;
+  font-weight: normal;
+  margin: 10px;
+}
