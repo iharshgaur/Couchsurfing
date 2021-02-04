@@ -2,13 +2,46 @@
     background-color: #F1EFEA;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  
+}
+.main__cont__box1
+{
+    width:60%;
+    margin: 1vw;
+}
+.main__cont__box2
+{
+    width:30%;
+    margin: 1vw;
+    padding: 1vw;
+
+}
+.main__cont__box2__info
+{   color:#ED6504;
+    padding:1vw;
+    background-color: white;
+    width:17vw;
+    margin-top:2vw;
+}
+.main__cont__box2__travel__info
+{
+    padding:1vw;
+    background-color: white;
+    width:17vw;
+    margin-top:2vw;
+    text-align: center;
+    color:#27374c;
+    background-color:#f7f7f7;
 }
 .main__cont__host__filter
 {
-    width:50%;
-    margin-left: 10vw;
+    width:54vw;
+    margin-left: 5vw;
+    margin-top: 14vh;
     background-color: white;
-   
     /* margin-top: 2vh; */
     color: #27374c;
 }
@@ -62,22 +95,21 @@
 }
 .main__cont__host__info
 {
-    width:55%;
-   
-    margin-left: 7.8vw;
+    width:55vw;
+    margin-left: 4vw;
     margin-top: 2vh;
     background-color: #F1EFEA;
     
     display: flex;
     justify-content:center;
-    align-items: center;
+    /* align-items: center; */
     flex-wrap: wrap;
     
 }
 .main__cont__host__info> div
 {
     margin: 1vh;
-    width: 25vw;
+    width: 26vw;
     min-height: 48vh;
     background-color:white;
     border-radius: 5px;

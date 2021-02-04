@@ -13,7 +13,7 @@ function Discussions() {
 
   // const history = useHistory();
   // const handleHosts = () => {
-  //   history.push(`/hosts/USA`);
+  //   history.push(`/hosts/India`);
   // };
 
   return (
