@@ -2,6 +2,7 @@
   background-color: white;
   border: 1px solid #ccc;
   width: 90%;
+  min-height: 400px;
   margin: 100px auto;
 }
 .DiscussionForum__Discussions > * {
@@ -9,7 +10,7 @@
 }
 .DiscussionForum__Discussions__Question {
   border: none;
-  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
   padding: 10px;
   width: 100%;
   display: flex;
@@ -36,7 +37,9 @@
 .DiscussionForum__Head__CreateDiscussion {
   display: flex;
   justify-content: space-between;
-  padding: 5px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  align-items: center;
 }
 
 .DiscussionForum__Head__CreateDiscussion > button,
@@ -53,21 +56,13 @@
   display: flex;
   align-items: center;
   width: 50%;
+  height: 50px;
 }
-.DiscussionForum__Head__CreateDiscussion__Search > button {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  width: 100px;
-  border: 1px solid black;
-  border-left: none;
-}
+
 .DiscussionForum__Head__CreateDiscussion__Search > input {
   height: 36px;
   width: 100%;
   outline: none;
   border: 1px solid black;
-  border-right: none;
   border-radius: 5px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
 }

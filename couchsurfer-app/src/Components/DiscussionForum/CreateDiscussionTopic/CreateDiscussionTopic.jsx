@@ -9,6 +9,7 @@ import { useHistory, useParams } from "react-router-dom";
 import Navbar from "../../Navbar/Navbar";
 function CreateDiscussionTopic() {
   const { country } = useParams();
+  const [warning, setWarning] = React.useState(false);
   const currentCountry = country;
   const history = useHistory();
   const dispatch = useDispatch();
@@ -18,17 +19,21 @@ function CreateDiscussionTopic() {
 
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    const payload = {
-      id: uuid(),
-      country: currentCountry,
-      question: data.question,
-      topic: data.details,
-      discussions: [],
-      username: data.username,
-      city: data.city,
-    };
-    dispatch(addDiscussions(payload));
-    history.push(`/country/${currentCountry}`);
+    if (data.city !== "default") {
+      const payload = {
+        id: uuid(),
+        country: currentCountry,
+        question: data.question,
+        topic: data.details,
+        discussions: [],
+        username: data.username,
+        city: data.city,
+      };
+      dispatch(addDiscussions(payload));
+      history.push(`/country/${currentCountry}`);
+    } else {
+      setWarning(true);
+    }
   };
 
   const countries = useSelector((state) => state.countries.countries);
@@ -58,7 +63,7 @@ function CreateDiscussionTopic() {
                 ref={register({ required: true })}
                 key={country.name}
               >
-                <option value="" disabled={true}>
+                <option value="default" selected="true" disabled="disabled">
                   Select Visiting City
                 </option>
                 {country.cities.map((city) => (
@@ -69,7 +74,7 @@ function CreateDiscussionTopic() {
               </select>
             ) : null
           )}
-
+          {warning && <p>*please select a city</p>}
           <br />
           <br />
 
