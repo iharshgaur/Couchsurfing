@@ -4,18 +4,24 @@
     color: white;
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
 }
 
 .countryList__country{
     font-size: 70px;
-    padding-top: 50px;
+    padding-top: 3%;
     font-weight: normal;
+}
+.countryList__cities{
+    text-align: center;
+    /* margin : 0px 30px; */
 
 }
 
 .countryList__wrapper{
     display: flex;
     flex-wrap: wrap;
+    text-align: center;
 }
 
 
@@ -23,20 +29,24 @@
     height: 500px;
     width: 25%;
     background-color: white;
-    margin: 50px auto;
+    margin: 5% 2% 5% 5%;
+    position: relative;
+    /* overflow:auto; */
    
 }
 
 .countryList__head{
     border-bottom: 1px solid rgb(201, 199, 199);
-    padding: 0px 50px 10px;
+    padding: 0px 2% 3%;
 }
 
 .countryList__event{
     background-color: white;
-    height: 80vh;
-    width: 1400px;
-    margin: 0px 65px;
+    height: 110vh;
+    /* width: 1400px; */
+    margin: 0px 10%;
+    overflow:auto;
+
     /* border: 1px solid black; */
     
 }
@@ -44,19 +54,47 @@
 .countryList__eventCard{
     border: 1px solid gray;
     display: flex;
+    flex-wrap: wrap;
     width: 42%;
-    padding: 20px;
-    margin:20px 30px;
+    padding: 1%;
+    margin:1% 2.75%;
+    
 }
 
 .countryList__join{
     color: white;
     border: 1px solid rgb(45, 133, 187);
     width: 70%;
-    margin-top: 25px;
+    margin-top: 5%;
     background-color: rgb(45, 133, 187);
-    padding: 10px;
+    padding: 3%;
     font-weight: bold;
     font-size: 15px;
 }
+
+.countryList__eventContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.countryList__members{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px ;
+    /* flex-direction: column; */
+}
+@media (max-width: 800px) {
+    .countryList__eventCard, .countryList__members, .countryList__wrapper{
+      flex: 50%;
+     
+    }
+  }
+
+  @media (max-width: 800px) {
+    .countryList__eventCard, .countryList__members, .countryList__wrapper{
+      flex: 50%;
+     
+    }
+  }
+
+
 

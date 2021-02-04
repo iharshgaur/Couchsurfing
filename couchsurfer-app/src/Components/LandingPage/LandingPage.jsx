@@ -16,13 +16,17 @@ const LandingPage = () => {
       <h3>Share Authentic Travel Experiences</h3>
 
       <div className={styles.landingPage__signUp}>
-        <SignUpFaster />
+        <div style={{width:"47%"}}>
+        <SignUpFaster />  
+        </div>
 
         <div className={styles.landingPage__or}>
           <p>or</p>
         </div>
 
-        <SignUpEmail />
+         <div style={{width:"47%"}}>
+         <SignUpEmail />
+         </div>
       </div>
 
       <div>
