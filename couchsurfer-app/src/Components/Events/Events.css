@@ -224,3 +224,53 @@ body {
 .Events__container__left__Joined > div:nth-child(3) > button:hover {
   background-color: rgb(175, 48, 2);
 }
+.Events__addcontainer {
+  position: fixed;
+  width: 50%;
+  background-color: white;
+  top: 100px;
+  left: 25%;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+.Events__addcontainer > img {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 30px;
+}
+.Events__addcontainer > form {
+  width: 70%;
+  margin: 10px auto;
+}
+.Events__addcontainer > form > div {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+  margin-top: 20px;
+}
+.Events__addcontainer > form > div > input {
+  width: 70%;
+  margin-right: 10px;
+  height: 40px;
+  font-size: 17px;
+}
+.Events__addcontainer > form > div > label {
+  text-align: left;
+}
+.Events__addcontainer_sub {
+  background-color: #0471b9;
+  height: 40px;
+  width: 150px;
+  color: #f7f7f7;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  margin-left: 150px;
+  margin-top: 20px;
+}
+.Events__addcontainer_sub:hover {
+  background-color: #02416b;
+}

@@ -3,11 +3,22 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "../../Components/Events/Events.css";
 import Navbar from "../../Components/Navbar/Navbar";
-import { getEvents, putEvents } from "../../Redux/Events/action";
+import { getEvents, postEvents, putEvents } from "../../Redux/Events/action";
+const obj = {
+country: "India",
+title: "",
+location: "",
+from: "",
+to: "",
+url: "https://picsum.photos/200/200",
+status: "false",
+}
 const Dashboard = () => {
+    const [detail, setDetail] = React.useState(obj);
     const data = useSelector(state => state.events.data);
     const dispatch = useDispatch();
     const history = useHistory();
+    const [popUp, setpopUp] = React.useState(false);
     React.useEffect(() => {
         dispatch(getEvents());
         console.log(data);
@@ -22,6 +33,17 @@ const Dashboard = () => {
     const handleRemove = (id) => {
         dispatch(putEvents(id, "false"));
     }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        dispatch(postEvents(detail));
+    }
+    const handleClose = () => {
+        setpopUp(!popUp)
+    }
+    const handleChange = (e) => {
+        const { value, name } = e.target;
+        setDetail({...detail,[name]:value})
+    }
   return (
     <>
       <Navbar></Navbar>
@@ -34,7 +56,7 @@ const Dashboard = () => {
             </div>
             <div className="Events__container__left__hr"></div>
             <div className="Events__container__left__createEvent__button" >
-             <button>+ Create an Event</button>
+             <button onClick={()=>setpopUp(!popUp)}>+ Create an Event</button>
             </div>
          </div>
             <div className="Events__container__left__createEvent" >
@@ -53,7 +75,7 @@ const Dashboard = () => {
                 Remove
               </button>
              </div>
-                    </div>  )
+          </div>  )
             }          
         </div>
         <div>
@@ -95,7 +117,30 @@ const Dashboard = () => {
                       
             }
         </div>
-      </div>
+          </div>
+          <div style={popUp==false?{display:"none"}:{display:"block"}} className="Events__addcontainer">
+              <img onClick={handleClose} src="https://image.flaticon.com/icons/png/512/106/106830.png" alt="close"/>
+              <form onSubmit={handleSubmit}>
+                  <div>
+                  <label htmlFor="Title"><h3>Title :</h3></label>
+                  <input type="text" onChange={handleChange} name="title" placeholder="Title" />
+                  </div>
+                  <div>
+                  <label htmlFor="Location"><h3>Location :</h3></label>
+                  <input type="text" onChange={handleChange} name="location" placeholder="Location" />
+                 </div>
+                  <div>
+                  <label htmlFor="From"><h3>From :</h3></label>
+                  <input type="date" onChange={handleChange} name="from" placeholder="Title" />
+                 </div>
+                  <div>
+                  <label htmlFor="TO"><h3>To :</h3></label>
+                  <input type="date" onChange={handleChange} name="to" placeholder="Title" />
+                  </div>
+                  <input className="Events__addcontainer_sub" type="submit"/>
+              </form>
+              
+        </div>
     </>
   );
 };
