@@ -1,20 +1,22 @@
 .DiscussionForum {
-  height: 600px;
   background-color: white;
   border: 1px solid #ccc;
   width: 90%;
-  margin: 10px auto;
+  margin: 100px auto;
 }
 .DiscussionForum__Discussions > * {
   margin: 0;
 }
 .DiscussionForum__Discussions__Question {
-  border: 1px solid #ccc;
+  border: none;
+  border-top: 1px solid #ccc;
   padding: 10px;
   width: 100%;
   display: flex;
   background-color: transparent;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
   outline: none;
 }
 .Question__Bottom {
@@ -29,4 +31,43 @@
   border-radius: 100%;
   height: 50px;
   margin-right: 10px;
+}
+
+.DiscussionForum__Head__CreateDiscussion {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.DiscussionForum__Head__CreateDiscussion > button,
+.DiscussionForum__Head__CreateDiscussion__Search > button {
+  background-color: #2d85bb;
+  color: #fff;
+  border: none;
+  height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.DiscussionForum__Head__CreateDiscussion__Search {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+.DiscussionForum__Head__CreateDiscussion__Search > button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  width: 100px;
+  border: 1px solid black;
+  border-left: none;
+}
+.DiscussionForum__Head__CreateDiscussion__Search > input {
+  height: 36px;
+  width: 100%;
+  outline: none;
+  border: 1px solid black;
+  border-right: none;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }

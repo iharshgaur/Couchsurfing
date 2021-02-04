@@ -22,6 +22,12 @@ function DiscussionForum({ countryName }) {
     <div className={styles.DiscussionForum}>
       <div className={styles.DiscussionForum__Head}>
         <div className={styles.DiscussionForum__Head__CreateDiscussion}>
+          <div
+            className={styles.DiscussionForum__Head__CreateDiscussion__Search}
+          >
+            <input type="text" placeholder="search...." />
+            <button>Search</button>
+          </div>
           <button
             onClick={() =>
               history.push(`/discussions/${countryName}/creatediscussion`)
