@@ -1,0 +1,54 @@
+.signUpEmail__background {
+    background-color: white;
+    /* padding: 60px; */
+    margin-left: 50px;
+    margin-top: 50px;
+    border-radius: 5px;
+    /* position: relative; */
+  }
+  
+  .signUpEmail__background > div:nth-of-type(1) {
+    padding: 20px 0px 30px 0px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: -10px;
+    /* background-color: yellow */
+  }
+  .signUpEmail__label {
+    display: inline-block;
+    width: calc(47% - 60px);
+  
+    /* background-color: yellow; */
+    margin: 10px;
+    text-align: left;
+  }
+  
+  .signUpEmail__label > input {
+    padding: 10px;
+    border: 1px solid rgb(206, 204, 204);
+    width: 120px;
+  }
+  
+  .signUpEmail__background > form > div:nth-of-type(3),
+  .signUpEmail__background > form > div:nth-of-type(4) {
+    padding: 20px 0px 0px 0px;
+    margin-left: -170px;
+  }
+  
+  .signUpEmail__background > form > div:nth-of-type(3) input,
+  .signUpEmail__background > form > div:nth-of-type(4) input {
+    width: 290px;
+    padding: 15px;
+  }
+  
+  .signUpEmail__join > input {
+    background-color: #ed6504;
+    border-color: #ed6504;
+    padding: 10px;
+    font-size: 16px;
+    width: calc(50% - 30px);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
