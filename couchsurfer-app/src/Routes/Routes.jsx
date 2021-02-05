@@ -12,6 +12,8 @@ import Events from "../Pages/Events/Events"
 import HostProfilePage from "../Pages/HostProfilePage/HostProfilePage"
 
 import Hosts from "../Pages/Hosts/Hosts";
+import Groups from "../Pages/Groups/Groups";
+import GroupsDetail from "../Pages/GroupsDetail/GroupsDetail";
 function Routes() {
   return (
     <Switch>
@@ -36,7 +38,12 @@ function Routes() {
       <Route exact path="/events">
         <Events></Events>
       </Route>
-
+      <Route exact path="/groups">
+        <Groups></Groups>
+      </Route>
+      <Route exact path="/groups/:id">
+        <GroupsDetail></GroupsDetail>
+      </Route>
       <Route exact path="/settings">
         <Settings></Settings>
       </Route>
