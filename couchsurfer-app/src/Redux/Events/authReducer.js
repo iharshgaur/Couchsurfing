@@ -1,7 +1,7 @@
 import * as Actions from "./actionType.js";
 
 const init = {
-  data: "",
+  data: [],
   isLoading: false,
   isError: false,
 };

@@ -22,20 +22,30 @@
   display: flex;
   flex-wrap: wrap;
   text-align: center;
+  justify-content: center;
 }
 
 .countryList__hostsCard {
   height: 500px;
   width: 25%;
   background-color: white;
-  margin: 5% 2% 5% 5%;
+  margin: 5% 1.5% 5% 0%;
   position: relative;
+
   /* overflow:auto; */
 }
 
 .countryList__head {
   border-bottom: 1px solid rgb(201, 199, 199);
   padding: 0px 2% 3%;
+  text-align: center;
+  /* margin-left: 50%; */
+}
+.countryList__headLine {
+  /* border-bottom: 1px solid rgb(201, 199, 199); */
+  padding: 0px 2% 3%;
+  text-align: center;
+  /* margin-left: 50%; */
 }
 
 .countryList__event {
@@ -75,7 +85,10 @@
 .countryList__members {
   display: flex;
   flex-wrap: wrap;
-  margin: 30px;
+  margin: 7%;
+  justify-content: center;
+
+  /* border: 1px solid red; */
   /* flex-direction: column; */
 }
 @media (max-width: 800px) {
