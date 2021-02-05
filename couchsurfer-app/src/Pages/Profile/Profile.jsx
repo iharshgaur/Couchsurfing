@@ -4,6 +4,9 @@ import Sidebar from "../../Components/Profile/Sidebar";
 import styles from "./Profile.module.css";
 import Navbar from "../../Components/Navbar/Navbar";
 function Profile() {
+  React.useEffect(() => {
+    document.title = "Profile | Couchsurfers";
+  }, []);
   return (
     <>
       <Navbar />

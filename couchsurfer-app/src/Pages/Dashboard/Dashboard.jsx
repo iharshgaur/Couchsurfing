@@ -8,7 +8,9 @@ import { Footer } from "../../Components/Footer/Footer";
 const Dashboard = () => {
   const history = useHistory();
   const currentUser = useSelector((state) => state.auth.current);
-
+  React.useEffect(() => {
+    document.title = "Dashboard | Couchsurfers";
+  }, []);
   const handleCountry = (country) => {
     history.push(`/country/${country}`);
   };
