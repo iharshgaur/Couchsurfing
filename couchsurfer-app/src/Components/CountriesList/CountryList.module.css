@@ -40,6 +40,13 @@
 .countryList__head{
     border-bottom: 1px solid rgb(201, 199, 199);
     padding: 0px 2% 3%;
+    text-align: center;
+    /* margin-left: 50%; */
+}
+.countryList__headLine{
+    /* border-bottom: 1px solid rgb(201, 199, 199); */
+    padding: 0px 2% 3%;
+    text-align: center;
     /* margin-left: 50%; */
 }
 

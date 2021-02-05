@@ -2,22 +2,23 @@ import React from "react";
 import styles from "./CountryList.module.css";
 import DiscussionForum from "../DiscussionForum/DiscussionForum";
 
-// const CountryIndia = ({ countryName, cityList,hostCountriesList }) => {
-const CountryIndia = ({ countryName, cityList,count}) => {
+const CountryIndia = ({ countryName, cityList,count, events,backImg}) => {
+   
+  // const [backImg, setBackImg] = React.useState("")
 
- 
-  // const [count , setCount] = React.useState(0)
+  // React.useEffect(()=>{
+  //   setBackImg( cityList?.map((ele)=>  countryName === ele.name ? ele.img : null))
 
-  //   React.useEffect(()=>{
-  //           setCount( hostCountriesList?.filter((country_item)=>countryName === country_item.country).length)            
-  //   },[count])
+  // },[cityList])
 
   return (
     <div>
       <div
         style={{
-          background:
-            "url(https://farm1.staticflickr.com/145/356953720_e2b12c64ea_b.jpg) no-repeat center 50%",
+          // background:
+          backgroundImage: `url(${backImg})`,
+          
+          // "url(https://farm1.staticflickr.com/145/356953720_e2b12c64ea_b.jpg) no-repeat center 50%",
           backgroundSize: "cover",
           height: "40vh",
           padding: "0px",
@@ -25,7 +26,11 @@ const CountryIndia = ({ countryName, cityList,count}) => {
           backgroundColor: "black",
           position: "relative",
         }}
-      >
+      >  
+      {/* {
+        cityList?.map((ele)=>  countryName === ele.name ? setBackImg(ele.img) : null)
+      
+      } */}
         <h1 className={styles.countryList__country}>{countryName}</h1>
         <br />
         <div style={{textAlign:"center"}}>
@@ -35,10 +40,11 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                 <button key={city} className={styles.countryList__cities}>
                   {city}
                 </button>
+                
               ))
             : null
         )}
-
+         {/* <div>{backImg}</div> */}
         {/* <div style = {{backgroundColor:"black",opacity:"0.4", position:"absolute",width:"100%", height:"40vh", top:"0px", left:"0px"}}></div> */}
       </div>
       </div>
@@ -46,7 +52,7 @@ const CountryIndia = ({ countryName, cityList,count}) => {
       <div className={styles.countryList__wrapper}>
         <div className={styles.countryList__hostsCard}>
           <h2 className={styles.countryList__head}>Local Hosts</h2>
-          <p>Stay with one of the {count} hosts in {countryName}</p>
+          <p  className={styles.countryList__headLine}>Stay with one of the {count} hosts in {countryName}</p>
 
 
           <div  className={styles.countryList__members}>
@@ -158,7 +164,7 @@ const CountryIndia = ({ countryName, cityList,count}) => {
         {/* card2 */}
         <div className={styles.countryList__hostsCard}>
           <h2 className={styles.countryList__head}> Upcoming Visitors</h2>
-          <p>Meet or Host some of the 795 visitors to {countryName}</p>
+          <p className={styles.countryList__headLine}>Meet or Host some of the 795 visitors to {countryName}</p>
 
           <div  className={styles.countryList__members}>
             <div>
@@ -267,7 +273,7 @@ const CountryIndia = ({ countryName, cityList,count}) => {
 
         <div className={styles.countryList__hostsCard}>
           <h2 className={styles.countryList__head}> Hangouts</h2>
-          <p>76 members available to meet now</p>
+          <p className={styles.countryList__headLine}>76 members available to meet now</p>
 
           {/* <div style={{ display: "flex", flexWrap: "wrap", margin: "30px" }}> */}
           <div className={styles.countryList__members}> 
@@ -357,8 +363,6 @@ const CountryIndia = ({ countryName, cityList,count}) => {
               <p style={{ margin: "0px" }}>James</p>
             </div>
 
-
-
             <button
               style={{
                 backgroundColor: "#287FB8",
@@ -380,8 +384,8 @@ const CountryIndia = ({ countryName, cityList,count}) => {
         <div className={styles.countryList__wrapper}>
           <div className={styles.countryList__event}>
             <h1 className={styles.countryList__head}>Events</h1>
-            {/* <div style={{ display: "flex", flexWrap: "wrap" }}> */}
-            <div className={styles.countryList__eventContainer}>
+           
+            {/* <div className={styles.countryList__eventContainer}>
               <div className={styles.countryList__eventCard}>
                 <img
                   src="https://tcdn.couchsurfing.com/uyIeZRDu16O58qHClnLP3B6atVo=/130x130/smart/https://ht-cdn.couchsurfing.com/assets/event-picture-placeholder3.png"
@@ -489,10 +493,70 @@ const CountryIndia = ({ countryName, cityList,count}) => {
                   <button className={styles.countryList__join}>Join</button>
                 </div>
               </div>
+            </div> */}
+            {
+          <div className={styles.countryList__eventContainer}>{events && events?.filter((ele)=>countryName === ele.country)
+            .map((ele)=>
+            <div className={styles.countryList__eventCard}>
+            <img
+               src = {ele.url}
+                alt="logo"
+              style={{
+                margin: "10px 80px 10px 10px",
+                width: "150px",
+                height: "150px",
+              }}
+            />
+
+            <div style={{ width: "50%" }}>
+              <h3>{ele.title}</h3>
+              <p>{ele.location} - {ele.country}</p>
+              <p>{ele.from}</p>
+              <button className={styles.countryList__join}>Join</button>
             </div>
           </div>
+          )}</div>
+
+          }
+
+             
+           
+            
+          </div>
+          {/* <div>
+            {
+              <div className={styles.countryList__eventContainer}>{events && events?.map((ele)=>
+              
+                 <div className={styles.countryList__eventCard}>
+                <img
+                  src="https://tcdn.couchsurfing.com/t_gvkaBDx-x_CoUl0wxtccPmzlk=/130x130/smart/https://s3.amazonaws.com/ht-images.couchsurfing.com/u/3685964/D357068B-84CA-40D6-92E1-9B455A72276B"
+                  alt="logo"
+                  style={{
+                    margin: "10px 80px 10px 10px",
+                    width: "150px",
+                    height: "150px",
+                  }}
+                />
+
+                <div style={{ width: "50%" }}>
+                  <h3>Event 4</h3>
+                  <p>Fri, Mar 5 at 7:30 PM IST</p>
+                  <button className={styles.countryList__join}>Join</button>
+                </div>
+              </div>
+
+            } 
+        </div> */}
+        
         </div>
       </div>
+
+      {/* <div>
+        {
+          <div className = {styles.countryList__eventCard}>{events && events?.map((ele)=><div>{ele.title}</div>)}</div>
+
+        }
+      </div> */}
       <DiscussionForum countryName={countryName} />
     </div>
   );
