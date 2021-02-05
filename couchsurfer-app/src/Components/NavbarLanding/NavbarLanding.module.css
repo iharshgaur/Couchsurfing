@@ -29,6 +29,10 @@
 
 .Navbar__select {
   color: orange;
+  width: 150px;
+  border: 1px solid #ccc;
+  height: 40px;
+  outline: none;
 }
 .Navbar__select__join {
   background-color: rgb(45, 133, 187);

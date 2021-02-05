@@ -20,7 +20,7 @@ const authReducer = (state = init, { type, payload }) => {
     case Actions.LOGIN: {
       return {
         ...state,
-        Islogin: true,
+        Islogin: !state.Islogin,
         current : payload,
         isLoading: false,
         isError: false,

@@ -4,7 +4,6 @@ import LoginComponent from "./LoginComponent";
 import { Redirect } from "react-router-dom";
 import styles from "./LoginPage.module.css";
 import { getUsers } from "../../Redux/Users/action";
-
 const LoginDetails = () => {
   const dispatch = useDispatch();
   React.useEffect(() => {

@@ -18,14 +18,10 @@ const NavbarLanding = () => {
         </li>
 
         <li>
-          <select>
+          <select className={styles.Navbar__select}>
             {["English", "Français", "Português", "Italiano", "Español"].map(
               (item) => (
-                <option
-                  key={item}
-                  value={item}
-                  className={styles.Navbar__select}
-                >
+                <option key={item} value={item}>
                   {item}
                 </option>
               )
