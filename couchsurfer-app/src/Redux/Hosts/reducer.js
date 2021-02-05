@@ -33,14 +33,15 @@ const hostReducer=(state=initState,{type,payload})=>
                 isError:true
             }
         )
-    // case todoActions.FILTER_BY_VERIFIED:
-    //     const newData=state.hostsData.filter((item)=>)
-    //     return (
-    //         {
-    //             ...state,
+    case todoActions.FILTER_BY_VERIFIED:
+        const verifiedData=state.hostsData.filter((item)=>item.verified===true)
+        return (
+            {
+                ...state,
+                hostsData:verifiedData
 
-    //         }
-    //     )
+            }
+        )
     case todoActions.FILTER_BY_REFRENCES:
        const newData=state.hostsData.filter((item)=>Number(item.references)!==0)
         return (

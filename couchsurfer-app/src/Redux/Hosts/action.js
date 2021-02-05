@@ -32,6 +32,13 @@ const getHosts=(params={})=>(dispatch)=>{
     .catch(err=>dispatch(getHostsFailure()))
 }
 export default getHosts
+export const getFilterByVerified=()=>{
+    return (
+        {
+            type:todoActions.FILTER_BY_VERIFIED
+        }
+    )
+}
 export const getFilterByLanguage=(payload)=>{
     return (
         {

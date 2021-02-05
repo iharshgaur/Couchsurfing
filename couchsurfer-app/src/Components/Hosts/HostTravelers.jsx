@@ -20,8 +20,8 @@ const HostTravelers = () => {
     const isLoading = useSelector(state => state.hosts.isLoading)
     const isError = useSelector(state => state.hosts.isError)
     const history=useHistory()
-    const handleClick=()=>{
-        history.push("")
+    const handleClick=(id)=>{
+        history.push(`/hosts/${country}/${id}`)
     }
     const handleGet=()=>{
         dispatch(getHosts())
@@ -82,7 +82,7 @@ const HostTravelers = () => {
                             {
                                 hostsData?.filter((item)=>item.country===country)
                                 .map((item)=>
-                                <div onClick={handleClick} key={item.id}>
+                                <div onClick={()=>handleClick(item.id)} key={item.id}>
                                     <div className={styles.main__cont__host__info__person__imgInfo}>
                                         <div>
                                             <img src={hostImg} alt="hello"/>
@@ -91,7 +91,7 @@ const HostTravelers = () => {
                                             <h4>{`${item.first_name} ${item.last_name}`}</h4>
                                             <h6>takes longer than a week to reply</h6>
                                             <p>Refrences:{item.references}</p>
-                                            <p>Friends:{item.friends}</p>
+                                            <p>Verified:{`${item.verified}`}</p>
                                             <p>Speaks : {item.language}</p>
                                             {item.accepting_guests?<p style={{color:"green"}}>Accepting guests</p>:<p style={{color:"grey"}}>may be accepting guests</p>}
 
@@ -110,7 +110,7 @@ const HostTravelers = () => {
                     }
                 </div>
             </div>
-            <div className={styles.main__cont__box2}>
+            {/* <div className={styles.main__cont__box2}>
                     <div className={styles.main__cont__box2__info}>
                         <p>Also near Delhi</p>
                         <div>
@@ -126,7 +126,7 @@ const HostTravelers = () => {
                     <div className={styles.main__cont__box2__travel__info}>
                         <h3>Enter your travel dates to <br/> filter out busy hosts</h3>
                     </div>
-            </div>
+            </div> */}
         </div>
     )
 }
