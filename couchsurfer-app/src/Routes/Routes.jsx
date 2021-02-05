@@ -14,51 +14,53 @@ import HostProfilePage from "../Pages/HostProfilePage/HostProfilePage";
 import Hosts from "../Pages/Hosts/Hosts";
 import Groups from "../Pages/Groups/Groups";
 import GroupsDetail from "../Pages/GroupsDetail/GroupsDetail";
+import { PrivateRoutes } from "./PrivateRoutes";
 function Routes() {
   return (
     <Switch>
-      <Route exact path="/profile">
+      
+      <PrivateRoutes exact path="/profile">
         <Profile />
-      </Route>
-      <Route exact path="/discussions/:country">
+      </PrivateRoutes>
+      <PrivateRoutes exact path="/discussions/:country">
         <Discussions />
-      </Route>
-      <Route exact path="/discussions/:country/question/:id">
+      </PrivateRoutes>
+      <PrivateRoutes exact path="/discussions/:country/question/:id">
         <Question />
-      </Route>
-      <Route exact path="/discussions/:country/creatediscussion">
+      </PrivateRoutes>
+      <PrivateRoutes exact path="/discussions/:country/creatediscussion">
         <CreateDiscussion />
-      </Route>
+      </PrivateRoutes>
       <Route exact path="/">
         <LandingPage />
       </Route>
-      <Route exact path="/dashboard">
+      <PrivateRoutes exact path="/dashboard">
         <Dashboard />
-      </Route>
-      <Route exact path="/events">
+      </PrivateRoutes>
+      <PrivateRoutes exact path="/events">
         <Events></Events>
-      </Route>
-      <Route exact path="/groups">
+      </PrivateRoutes>
+      <PrivateRoutes exact path="/groups">
         <Groups></Groups>
-      </Route>
-      <Route exact path="/groups/:id">
+      </PrivateRoutes>
+      <PrivateRoutes exact path="/groups/:id">
         <GroupsDetail></GroupsDetail>
-      </Route>
-      <Route exact path="/settings">
+      </PrivateRoutes>
+      <PrivateRoutes exact path="/settings">
         <Settings></Settings>
-      </Route>
-      <Route path="/country/:country">
+      </PrivateRoutes>
+      <PrivateRoutes path="/country/:country">
         <Country />
-      </Route>
-      <Route exact path="/hosts/:country">
+      </PrivateRoutes>
+      <PrivateRoutes exact path="/hosts/:country">
         <Hosts />
-      </Route>
-      <Route exact path="/settings">
+      </PrivateRoutes>
+      <PrivateRoutes exact path="/settings">
         <Settings />
-      </Route>
-      <Route exact path="/hosts/:country/:hostId">
+      </PrivateRoutes>
+      <PrivateRoutes exact path="/hosts/:country/:hostId">
         <HostProfilePage></HostProfilePage>
-      </Route>
+      </PrivateRoutes>
       <Route>
         <h1>error 404 : page not found</h1>
       </Route>
