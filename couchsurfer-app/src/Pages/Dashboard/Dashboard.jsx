@@ -3,6 +3,8 @@ import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "../../Components/Dashboard/Dashboard.css";
 import Navbar from "../../Components/Navbar/Navbar";
+import { Footer } from "../../Components/Footer/Footer";
+
 const Dashboard = () => {
   const history = useHistory();
   const currentUser = useSelector((state) => state.auth.current);
@@ -98,6 +100,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

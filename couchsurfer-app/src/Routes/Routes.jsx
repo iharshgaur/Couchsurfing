@@ -10,10 +10,7 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 import Settings from "../Pages/Settings";
 import Events from "../Pages/Events/Events";
 import HostProfilePage from "../Pages/HostProfilePage/HostProfilePage";
-
 import Hosts from "../Pages/Hosts/Hosts";
-import Groups from "../Pages/Groups/Groups";
-import GroupsDetail from "../Pages/GroupsDetail/GroupsDetail";
 function Routes() {
   return (
     <Switch>
@@ -33,16 +30,10 @@ function Routes() {
         <LandingPage />
       </Route>
       <Route exact path="/dashboard">
-        <Dashboard />
+        <Dashboard></Dashboard>
       </Route>
       <Route exact path="/events">
         <Events></Events>
-      </Route>
-      <Route exact path="/groups">
-        <Groups></Groups>
-      </Route>
-      <Route exact path="/groups/:id">
-        <GroupsDetail></GroupsDetail>
       </Route>
       <Route exact path="/settings">
         <Settings></Settings>
@@ -60,7 +51,7 @@ function Routes() {
         <HostProfilePage></HostProfilePage>
       </Route>
       <Route>
-        <h1>error 404 : page not found</h1>
+        <p>error 404 : page not found</p>
       </Route>
     </Switch>
   );
