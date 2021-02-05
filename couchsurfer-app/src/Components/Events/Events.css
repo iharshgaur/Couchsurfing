@@ -65,6 +65,25 @@ body {
   box-shadow: 0 2px 0 0 rgb(163, 163, 163);
   overflow: hidden;
 }
+.Events__container__filter {
+  height: 80px;
+  background-color: #ffffff;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 0 rgb(163, 163, 163);
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Events__container__filter > h3 {
+  margin: 20px;
+}
+.Events__container__filter > select {
+  height: 40px;
+  width: 150px;
+  font-size: 17px;
+}
 .Events__container__right > div > h4 {
   margin-left: 50px;
 }
