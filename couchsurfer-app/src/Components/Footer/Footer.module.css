@@ -1,0 +1,81 @@
+.footer__wrapper{
+    background-color: white;
+    margin: 0%;
+    height: 30vh;
+    border-top: 1px solid rgb(192, 188, 188);
+}
+/* import { fab, faTwitter, faFacebook, faTumbler } from '@fortawesome/free-brands-svg-icons' */
+
+
+.footer__head{
+    display: flex;
+   
+}
+.footer__head > div{
+   margin-left: 2%;
+   margin-top: 2%;
+   font-weight: bold;
+   font-size: 14px;
+   color: rgb(85, 84, 84);
+}
+.footer__head > div:hover{
+    color: #F27D04;
+ }
+.footer__head > div:nth-of-type(1){
+    margin-left: 5%;
+ }
+ .footer__head > div:nth-of-type(7){
+    margin-left: 38%;
+ }
+ .footer__head > div:nth-of-type(7) select{
+     padding: 5px 20px;
+    color: #F27D04;
+
+ }
+
+ .footer__line, .footer__Icon{
+    display: flex;
+    color: #929DAD;
+    font-size: 13.5px;  
+    font-weight: bold;
+}
+
+.footer__line>div{
+    margin-left: 5%;
+   margin-top: 2%;
+   color:rgb(167, 166, 166);
+   font-size:15px;
+    display:flex;
+    margin-bottom: 1%;
+}
+.footer__line>div:nth-of-type(2){
+    margin-left: 3%;
+}
+.footer__Icon>div{
+    display: flex;
+    margin-left: 5%;
+}
+.footer__Icon>div:nth-of-type(2){
+    margin-left: 5%;
+    /* border:1px solid black; */
+}
+.footer__Icon > div>div{
+    /* margin-left:-1%; */
+    margin-right: 30%;
+   color:rgb(99, 98, 98);
+   font-size: 20px;
+   /* border: 1px solid rgb(206, 204, 204);
+   border-radius: 50%;
+   padding:10%;
+   width: 50%;
+   justify-content: center;
+   align-items: center; */
+
+}
+.footer__Icon>div:nth-of-type(2)>div:nth-of-type(1){
+    margin-left: 150%;
+    margin-right: 30%;
+    /* padding: 50%; */
+    /* border: 1px solid black; */
+}
+ 

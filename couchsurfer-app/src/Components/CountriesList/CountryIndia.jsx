@@ -2,8 +2,13 @@ import React from "react";
 import styles from "./CountryList.module.css";
 import DiscussionForum from "../DiscussionForum/DiscussionForum";
 import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { getEvents, postEvents, putEvents } from "../../Redux/Events/action";
+import { Footer } from "../Footer/Footer";
+
 
 const CountryIndia = ({ countryName, cityList, count, events, backImg }) => {
+  
   const [id, setId] = React.useState(0);
   const history = useHistory();
   React.useEffect(() => {
@@ -11,6 +16,13 @@ const CountryIndia = ({ countryName, cityList, count, events, backImg }) => {
       countryName === country_item.name ? setId(country_item.id) : null
     );
   }, [countryName]);
+
+  const dispatch = useDispatch();
+
+  const handleJoin = (id) => {
+    dispatch(putEvents(id, "true"));
+}
+
   return (
     <div>
       <div
@@ -381,12 +393,12 @@ const CountryIndia = ({ countryName, cityList, count, events, backImg }) => {
                 events
                   ?.filter((ele) => countryName === ele.country)
                   .map((ele) => (
-                    <div className={styles.countryList__eventCard}>
+                    <div key = {ele.id} className={styles.countryList__eventCard}>
                       <img
                         src={ele.url}
                         alt="logo"
                         style={{
-                          margin: "10px 80px 10px 10px",
+                          margin: "10px 30px 10px 10px",
                           width: "150px",
                           height: "150px",
                         }}
@@ -398,9 +410,10 @@ const CountryIndia = ({ countryName, cityList, count, events, backImg }) => {
                           {ele.location} - {ele.country}
                         </p>
                         <p>{ele.from}</p>
-                        <button className={styles.countryList__join}>
-                          Join
-                        </button>
+                        {
+                          ele.status=="false"?<button className={styles.countryList__join} onClick={() => handleJoin(ele.id)}>JOIN</button>:""
+                        }
+                        
                       </div>
                     </div>
                   ))}
@@ -410,6 +423,7 @@ const CountryIndia = ({ countryName, cityList, count, events, backImg }) => {
       </div>
 
       <DiscussionForum countryName={countryName} />
+      <Footer/>
     </div>
   );
 };

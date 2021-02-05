@@ -29,7 +29,7 @@ function CountryLists({ country }) {
     );
 
     setBackImg(
-      countries?.map((ele) => (country === ele.name ? ele.img : null))
+      countries?.map((ele) => (country === ele.name ? ele.img : ele.img ))
     );
   }, [countries]);
 
