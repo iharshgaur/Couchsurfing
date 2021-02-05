@@ -21,6 +21,7 @@ function LoginComponent() {
     } else {
       setCheck(false);
       dispatch(loginSuccess(currentUser));
+      localStorage.setItem("login","true")
     }
   };
 

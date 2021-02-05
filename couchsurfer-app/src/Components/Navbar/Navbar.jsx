@@ -11,7 +11,6 @@ const Navbar = () => {
             <div className="Navbar__left">
                 <img src="https://i.imgur.com/nMkAWNm.png" alt="logo" />
                 <div>
-                        
                         <select>
                         <option value="explore">Explore</option>
                         <option value="host">Find Host</option>
@@ -38,7 +37,7 @@ const Navbar = () => {
             </div>
             {status&&<div className="Navbar__linksDiv__settings">
                     <Link className="Navbar__linksDiv__links p2" to="/settings"><p>{`Account &Settings`}</p></Link>
-                    <Link className="Navbar__linksDiv__links p2" to="/"><p>Logout</p></Link>
+                    <Link onClick={()=>localStorage.setItem("login","false")} className="Navbar__linksDiv__links p2" to="/"><p>Logout</p></Link>
             </div>}
     </div>
     )
