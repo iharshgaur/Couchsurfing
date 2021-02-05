@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import CreateDiscussion from "../Pages/Discussions/CreateDiscussion/CreateDiscussion";
 import Discussions from "../Pages/Discussions/Discussions";
 import Profile from "../Pages/Profile/Profile";
@@ -17,7 +17,6 @@ import { PrivateRoutes } from "./PrivateRoutes";
 function Routes() {
   return (
     <Switch>
-      
       <PrivateRoutes exact path="/profile">
         <Profile />
       </PrivateRoutes>
@@ -33,15 +32,6 @@ function Routes() {
       <Route exact path="/">
         <LandingPage />
       </Route>
-<<<<<<< HEAD
-      <Route exact path="/dashboard">
-        <Dashboard></Dashboard>
-      </Route>
-      <Route exact path="/events">
-        <Events></Events>
-      </Route>
-      <Route exact path="/settings">
-=======
       <PrivateRoutes exact path="/dashboard">
         <Dashboard />
       </PrivateRoutes>
@@ -55,7 +45,6 @@ function Routes() {
         <GroupsDetail></GroupsDetail>
       </PrivateRoutes>
       <PrivateRoutes exact path="/settings">
->>>>>>> ecc7cc8519c9cdaa5ba534faabbb95928a903ab0
         <Settings></Settings>
       </PrivateRoutes>
       <PrivateRoutes path="/country/:country">
@@ -72,6 +61,7 @@ function Routes() {
       </PrivateRoutes>
       <Route>
         <p>error 404 : page not found</p>
+        <Redirect to="/" />
       </Route>
     </Switch>
   );
