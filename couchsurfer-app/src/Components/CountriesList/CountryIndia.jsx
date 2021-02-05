@@ -2,8 +2,15 @@ import React from "react";
 import styles from "./CountryList.module.css";
 import DiscussionForum from "../DiscussionForum/DiscussionForum";
 import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { getEvents, postEvents, putEvents } from "../../Redux/Events/action";
+import { Footer } from "../Footer/Footer";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faHome, faPlane, faMapMarker, faCalendarAlt} from '@fortawesome/free-solid-svg-icons'
+
 
 const CountryIndia = ({ countryName, cityList, count, events, backImg }) => {
+  
   const [id, setId] = React.useState(0);
   const history = useHistory();
   React.useEffect(() => {
@@ -11,6 +18,13 @@ const CountryIndia = ({ countryName, cityList, count, events, backImg }) => {
       countryName === country_item.name ? setId(country_item.id) : null
     );
   }, [countryName]);
+
+  const dispatch = useDispatch();
+
+  const handleJoin = (id) => {
+    dispatch(putEvents(id, "true"));
+}
+
   return (
     <div>
       <div
@@ -26,6 +40,7 @@ const CountryIndia = ({ countryName, cityList, count, events, backImg }) => {
       >
         <h1 className={styles.countryList__country}>{countryName}</h1>
         <br />
+
         <div style={{ textAlign: "center" }}>
           {cityList?.map((country_item) =>
             countryName === country_item.name
@@ -43,8 +58,16 @@ const CountryIndia = ({ countryName, cityList, count, events, backImg }) => {
 
       <div className={styles.countryList__wrapper}>
         <div className={styles.countryList__hostsCard}>
-          <h2 className={styles.countryList__head}>Local Hosts</h2>
+           
+          <h2 className={styles.countryList__head}>
+            
+              <span><FontAwesomeIcon icon={faHome} color="black" /> </span>
+         
+          Local Hosts
+          </h2>
+
           <p className={styles.countryList__headLine}>
+
             Stay with one of the {count} hosts in {countryName}
           </p>
 
@@ -154,7 +177,10 @@ const CountryIndia = ({ countryName, cityList, count, events, backImg }) => {
 
         {/* card2 */}
         <div className={styles.countryList__hostsCard}>
-          <h2 className={styles.countryList__head}> Upcoming Visitors</h2>
+          <h2 className={styles.countryList__head}> 
+          <span><FontAwesomeIcon icon={faPlane} color="black" /> </span>
+
+          Upcoming Visitors</h2>
           <p className={styles.countryList__headLine}>
             Meet or Host some of the 795 visitors to {countryName}
           </p>
@@ -265,7 +291,9 @@ const CountryIndia = ({ countryName, cityList, count, events, backImg }) => {
         {/* card3  */}
 
         <div className={styles.countryList__hostsCard}>
-          <h2 className={styles.countryList__head}> Hangouts</h2>
+          <h2 className={styles.countryList__head}> 
+          <span><FontAwesomeIcon icon={faMapMarker} color="black" /> </span>
+          Hangouts</h2>
           <p className={styles.countryList__headLine}>
             76 members available to meet now
           </p>
@@ -374,19 +402,21 @@ const CountryIndia = ({ countryName, cityList, count, events, backImg }) => {
 
         <div className={styles.countryList__wrapper}>
           <div className={styles.countryList__event}>
-            <h1 className={styles.countryList__head}>Events</h1>
+            <h1 className={styles.countryList__head}>
+          <span><FontAwesomeIcon icon={faCalendarAlt} color="black" /> </span>
+          Events</h1>
 
             <div className={styles.countryList__eventContainer}>
               {events &&
                 events
                   ?.filter((ele) => countryName === ele.country)
                   .map((ele) => (
-                    <div className={styles.countryList__eventCard}>
+                    <div key = {ele.id} className={styles.countryList__eventCard}>
                       <img
                         src={ele.url}
                         alt="logo"
                         style={{
-                          margin: "10px 80px 10px 10px",
+                          margin: "10px 30px 10px 10px",
                           width: "150px",
                           height: "150px",
                         }}
@@ -398,9 +428,10 @@ const CountryIndia = ({ countryName, cityList, count, events, backImg }) => {
                           {ele.location} - {ele.country}
                         </p>
                         <p>{ele.from}</p>
-                        <button className={styles.countryList__join}>
-                          Join
-                        </button>
+                        {
+                          ele.status=="false"?<button className={styles.countryList__join} onClick={() => handleJoin(ele.id)}>JOIN</button>:""
+                        }
+                        
                       </div>
                     </div>
                   ))}
@@ -410,6 +441,7 @@ const CountryIndia = ({ countryName, cityList, count, events, backImg }) => {
       </div>
 
       <DiscussionForum countryName={countryName} />
+      <Footer/>
     </div>
   );
 };
