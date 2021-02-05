@@ -8,24 +8,30 @@
 .main__cont__host__info
 {
     padding: 2%;
-    border-right: 1px solid grey;
+    border: 1px solid grey;
     margin:1vh;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 1px grey;
 
 }
 .main__cont__accomodations
 {
-    border-right: 1px solid grey;
+    border: 1px solid grey;
     padding: 2%;
     margin: 1vh;
     overflow-wrap: break-word;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 1px grey;
 }
 .main__cont__preferences{
-    border-right: 1px solid grey;
+    border: 1px solid grey;
     padding: 2%;
     margin: 1vh;
     word-wrap: break-word;
     word-break: break-all;
     overflow-wrap: break-word;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 1px grey;
 }
 .main__cont__preference__keyword input
 {
@@ -35,7 +41,7 @@
 {
     padding:2% 3%;
     background-color: #287FB8;
-    margin: 1vh 5vh;
+    margin: 1vh 5.3vh;
     color: white;
     border-radius: 4px;
     border: 0;

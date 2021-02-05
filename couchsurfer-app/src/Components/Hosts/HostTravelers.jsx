@@ -20,8 +20,7 @@ const prefrences_filters=["Kids at Home",
 const hostDesc=[`Lorem Ipsum is simply dummy text of the 
 printing and typesetting industry. Lorem Ipsum has been 
 the industry's standard dummy text ever since`] 
-const hostImg="https://images.unsplash.com/photo-1574213513359-5abf46101f60?ixid=MXwxMjA3fDB8MHx0b3BpYy1mZWVkfDR8dG93SlpGc2twR2d8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-
+const hostImg="https://images.unsplash.com/photo-1612469639025-fe1b5b3f3ceb?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
 const HostTravelers = () => {
     const[curr,setCurr]=React.useState("HOST")
     const[showFilters,setShowFilters]=React.useState(false)
@@ -289,7 +288,7 @@ const HostTravelers = () => {
                             
                                         </div>
                                     </div>
-                                    <input className={Styles.submit__btn} type="submit" value="SEARCH"/>
+                                    {/* <input className={Styles.submit__btn} type="submit" value="SEARCH"/> */}
                                     </form>
                                     <button className={Styles.submit__btn} onClick={handleReload} >CLEAR FILTERS</button>
                                     </>
