@@ -1,17 +1,11 @@
 import React from "react";
 import { LoginDetails } from "../LoginPage/LoginPage";
 
-
 import styles from "./NavbarLanding.module.css";
 
 const NavbarLanding = () => {
+  const [mount, setMount] = React.useState(false);
 
-  const [login, setLogin] = React.useState(false);
-
-  const logInChange = () => {
-    setLogin(!login);
-    console.log(login);
-  };
   return (
     <div className={styles.Navbar__background}>
       <ul>
@@ -40,7 +34,7 @@ const NavbarLanding = () => {
         </li>
 
         <li>
-          <div style={{width:"100%"}}>How It Works</div>
+          <div style={{ width: "100%" }}>How It Works</div>
         </li>
 
         <li>
@@ -53,7 +47,7 @@ const NavbarLanding = () => {
 
         <li>
           <button
-            onClick={logInChange}
+            onClick={() => setMount(!mount)}
             className={styles.Navbar__select__login}
           >
             Log In
@@ -61,7 +55,7 @@ const NavbarLanding = () => {
         </li>
       </ul>
 
-      { login ? <LoginDetails/> : null}
+      {mount ? <LoginDetails /> : null}
     </div>
   );
 };

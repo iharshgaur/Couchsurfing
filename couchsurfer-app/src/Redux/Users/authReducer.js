@@ -1,9 +1,9 @@
 import * as Actions from "./actionType.js";
 
 const init = {
-  loginData: "",
-  login: false,
-  registerData: "",
+  users: [],
+  Islogin: false,
+  current : {},
   isLoading: false,
   isError: false,
 };
@@ -17,13 +17,21 @@ const authReducer = (state = init, { type, payload }) => {
         isError: false,
       };
     }
+    case Actions.LOGIN: {
+      return {
+        ...state,
+        Islogin: true,
+        current : payload,
+        isLoading: false,
+        isError: false,
+      };
+    }
     case Actions.GET_USER_SUCCESS: {
       return {
         ...state,
         isLoading: false,
         isError: false,
-        loginData: payload,
-        login: true,
+        users: payload,
       };
     }
     case Actions.GET_USER_FAILURE: {
@@ -45,7 +53,7 @@ const authReducer = (state = init, { type, payload }) => {
         ...state,
         isLoading: false,
         isError: false,
-        registerData: payload,
+        users: [...state.users,payload],
       };
     }
     case Actions.REGISTER_USER_FAILURE: {

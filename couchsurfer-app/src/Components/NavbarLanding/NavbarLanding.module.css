@@ -1,54 +1,55 @@
 .Navbar__background {
-    background-color: white;
-    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 25%);
-    position: fixed;
-    top: 0;
-    font-size: 16px;
-    width: 100%;
-  }
-  .Navbar__background > ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 50px;
+  background-color: white;
+  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 25%);
+  position: fixed;
+  top: 0;
+  font-size: 16px;
+  width: 100%;
+}
+.Navbar__background > ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50px;
+}
+.Navbar__background > ul > li {
+  list-style: none;
+  margin-left: 2%;
+  /* margin-right:30px; */
+  /* width: 350px; */
+}
 
-  }
-  .Navbar__background > ul > li {
-    list-style: none;
-    margin-left: 2%;
-    /* margin-right:30px; */
-    /* width: 350px; */
-  }
-  
-  .Navbar__background > ul > li:nth-of-type(1) {
-    margin-left: 5%;
-  }
-  
-  .Navbar__background > ul > li:nth-of-type(2) {
-    margin-left: 30%;
-  }
-  
-  .Navbar__select {
-    color: orange;
-  }
-  .Navbar__select__join {
-    background-color: rgb(45, 133, 187);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 15px;
-    font-weight: bold;
-  }
-  .Navbar__select__login {
-    color: rgb(45, 133, 187);
-    background-color: white;
-    border: 1px solid rgb(45, 133, 187);
-    border-radius: 5px;
-    padding: 10px;
-  }
-  
-  /* background-color: #fff;
+.Navbar__background > ul > li:nth-of-type(1) {
+  margin-left: 5%;
+}
+
+.Navbar__background > ul > li:nth-of-type(2) {
+  margin-left: 30%;
+}
+
+.Navbar__select {
+  color: orange;
+}
+.Navbar__select__join {
+  background-color: rgb(45, 133, 187);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 15px;
+  width: 100px;
+  font-weight: bold;
+}
+.Navbar__select__login {
+  color: rgb(45, 133, 187);
+  background-color: white;
+  border: 1px solid rgb(45, 133, 187);
+  border-radius: 5px;
+  width: 100px;
+  padding: 10px;
+}
+
+/* background-color: #fff;
       box-shadow: 0 3px 6px 0 rgb(0 0 0 / 25%);
       position: 
       fixed;
@@ -57,4 +58,3 @@
       width: 100vw;
       z-index: 6;
       font-size: 16px; */
-  

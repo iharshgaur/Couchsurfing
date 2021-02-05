@@ -1,11 +1,21 @@
 import * as Actions from "./actionType.js";
 import axios from "axios";
 
+
+//user Request
 const userRequest = () => {
   return {
     type: Actions.GET_USER_REQUEST,
   };
 };
+
+export const loginSuccess = (payload) => {
+  return {
+    type: Actions.LOGIN,
+    payload
+  };
+};
+
 const userSuccess = (payload) => {
   return {
     type: Actions.GET_USER_SUCCESS,
@@ -19,10 +29,12 @@ const userFailure = (err) => {
   };
 };
 
-export const login = (params) => (dispatch) => {
+export const getUsers = (params) => (dispatch) => {
   dispatch(userRequest());
   return axios
-    .post("https://masai-api-mocker.herokuapp.com/auth/login", params)
+    .get(`https://hidden-springs-42645.herokuapp.com/users`,{
+      params
+    })
     .then((res) => {
       dispatch(userSuccess(res.data));
     })
@@ -31,6 +43,8 @@ export const login = (params) => (dispatch) => {
     });
 };
 
+
+//User Registration
 const registerRequest = () => {
   return {
     type: Actions.REGISTER_USER_REQUEST,
@@ -49,11 +63,12 @@ const registerFailure = (err) => {
   };
 };
 
-export const register = (params) => (dispatch) => {
+export const register = (payload) => (dispatch) => {
   dispatch(registerRequest());
   return axios
-    .post("https://masai-api-mocker.herokuapp.com/auth/register", params)
+    .post("https://hidden-springs-42645.herokuapp.com/users", payload)
     .then((res) => {
+      console.log(res.data)
       dispatch(registerSuccess(res.data));
     })
     .catch((err) => {

@@ -1,16 +1,29 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import styles from "./LoginComponent.module.css";
+import { loginSuccess } from "../../Redux/Users/action";
 
-import { useDispatch } from "react-redux";
-import { login } from "../../Redux/Users/action";
 function LoginComponent() {
-  const [username, setUsername] = React.useState("");
+  const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const [check, setCheck] = React.useState(false);
   const dispatch = useDispatch();
+  const users = useSelector((state) => state.auth.users);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(login({ username, password }));
+    const currentUser = users.find(
+      (user) => user.email === email && user.password === password
+    );
+
+    if (currentUser === undefined) {
+      setCheck(true);
+    } else {
+      setCheck(false);
+      dispatch(loginSuccess(currentUser));
+    }
   };
+
   return (
     <div className={styles.loginPage__form}>
       <form onSubmit={handleSubmit}>
@@ -18,27 +31,39 @@ function LoginComponent() {
 
         <input
           type="text"
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={(e) => {
+            setCheck(false);
+            setEmail(e.target.value.trim());
+          }}
           placeholder="Email or Username"
           className={styles.loginPage__input}
+          required={true}
         />
         <br />
         <br />
 
         <input
           type="password"
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={(e) => {
+            setCheck(false);
+            setPassword(e.target.value.trim());
+          }}
           placeholder="Password"
           className={styles.loginPage__input}
+          required={true}
         />
         <br />
 
-        <input type="checkbox" className={styles.loginPage__check} />
+        <input
+          type="checkbox"
+          className={styles.loginPage__check}
+          required={true}
+        />
         <span className={styles.loginPage__rem}> Remember me </span>
 
         <span className={styles.loginPage__forgot}>Forgot password?</span>
         <br />
-
+        {check === true ? <p>*wrong email or password</p> : <p></p>}
         <button onClick={handleSubmit} className={styles.loginPage__login}>
           Log In
         </button>

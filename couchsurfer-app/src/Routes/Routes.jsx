@@ -8,8 +8,8 @@ import { LandingPage } from "../Components/LandingPage/LandingPage";
 import Country from "../Pages/countries/countries";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import Settings from "../Pages/Settings";
-import Events from "../Pages/Events/Events"
-import HostProfilePage from "../Pages/HostProfilePage/HostProfilePage"
+import Events from "../Pages/Events/Events";
+import HostProfilePage from "../Pages/HostProfilePage/HostProfilePage";
 
 import Hosts from "../Pages/Hosts/Hosts";
 function Routes() {
@@ -31,12 +31,11 @@ function Routes() {
         <LandingPage />
       </Route>
       <Route exact path="/dashboard">
-        <Dashboard></Dashboard>
+        <Dashboard />
       </Route>
       <Route exact path="/events">
         <Events></Events>
       </Route>
-
       <Route exact path="/settings">
         <Settings></Settings>
       </Route>
@@ -53,7 +52,7 @@ function Routes() {
         <HostProfilePage></HostProfilePage>
       </Route>
       <Route>
-        <p>error 404 : page not found</p>
+        <h1>error 404 : page not found</h1>
       </Route>
     </Switch>
   );

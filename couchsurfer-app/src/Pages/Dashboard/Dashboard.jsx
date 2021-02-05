@@ -1,9 +1,12 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import { useSelector } from "react-redux";
 import "../../Components/Dashboard/Dashboard.css";
 import Navbar from "../../Components/Navbar/Navbar";
 const Dashboard = () => {
   const history = useHistory();
+  const currentUser = useSelector((state) => state.auth.current);
+
   const handleCountry = (country) => {
     history.push(`/country/${country}`);
   };
@@ -15,8 +18,10 @@ const Dashboard = () => {
           <div>
             <div>
               {" "}
-              <h3>Arshad Ali</h3>
-              <p>Muradabad, Uttar Pradesh, India</p>
+              <h3>
+                {currentUser.first_name} {currentUser.last_name}
+              </h3>
+              <p>Delhi, India</p>
             </div>
             <div className="dashboard__container__left__hr"></div>
             <div>

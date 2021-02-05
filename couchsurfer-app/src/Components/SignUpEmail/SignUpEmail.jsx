@@ -2,27 +2,32 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { register } from "../../Redux/Users/action";
 import styles from "./SignUpEmail.module.css";
- const obj={
-  name: "",
+const obj = {
+  accepting_guests: false,
+  first_name: "",
+  last_name: "",
   email: "",
   password: "",
-  username: "",
-  mobile: "999999999",
-  description: "A Transformation in education!" 
-}
+  description:
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sequi temporibus voluptates id laborum quod eius iste facilis nesciunt atque?",
+};
 
 const SignUpEmail = () => {
   const [firstName, setFirstName] = React.useState("");
   const [lastName, setLastName] = React.useState("");
-  const dispatch = useDispatch();
-  const handleSubmit = (e) => {
-    obj.name = `${firstName} ${lastName}`;
-    console.log(obj);
-    e.preventDefault();
-    dispatch(register(obj));
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
 
-  }
-  const { email, password } = obj;
+  const dispatch = useDispatch();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    obj.first_name = firstName;
+    obj.last_name = lastName;
+    obj.email = email;
+    obj.password = password;
+    dispatch(register(obj));
+  };
 
   return (
     <div className={styles.signUpEmail__background}>
@@ -31,19 +36,31 @@ const SignUpEmail = () => {
       <form onSubmit={handleSubmit}>
         <div className={styles.signUpEmail__label}>
           <label>First Name</label>
-          <input type="text" onChange={(e)=>setFirstName(e.target.value)}  placeholder="First Name" />
+          <input
+            type="text"
+            onChange={(e) => setFirstName(e.target.value)}
+            placeholder="First Name"
+          />
         </div>
 
         <div className={styles.signUpEmail__label}>
           {/* <input type="text" placeholder="First Name" /> */}
           <label>Last Name</label>
-          <input type="text" onChange={(e)=>setLastName(e.target.value)} placeholder="Last Name" />
+          <input
+            type="text"
+            onChange={(e) => setLastName(e.target.value)}
+            placeholder="Last Name"
+          />
         </div>
 
         <br />
         <div className={styles.signUpEmail__label}>
           <label>Email</label>
-          <input type="text" onChange={(e)=>obj.email=e.target.value} placeholder="Email" />
+          <input
+            type="text"
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email"
+          />
         </div>
         <br />
         <br />
@@ -51,11 +68,15 @@ const SignUpEmail = () => {
         <div className={styles.signUpEmail__label}>
           <label>Password</label>
           {/* <p>Must be at least 8 characters</p> */}
-          <input type="password"  onChange={(e)=>obj.password=e.target.value} placeholder="Password" />
+          <input
+            type="password"
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+          />
         </div>
 
         <div className={styles.signUpEmail__join}>
-          <input type="submit"  value="Join" />
+          <input type="submit" value="Join" />
         </div>
         <br />
       </form>
