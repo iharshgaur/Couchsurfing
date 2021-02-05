@@ -19,7 +19,7 @@ function Sidebar() {
       <hr />
       <div className={styles.SidebarContainer__Bottom}>
         <div className={styles.SidebarContainer__Bottom__Headers}>
-         {userData.verified?<h3 style={{color:"green"}}>Verified</h3>:<h3 style={{color:"red"}}>Profile not Verified</h3>}
+         {userData.verified?<h4 style={{color:"green"}}>Verified</h4>:<h4 style={{color:"red"}}>Profile not Verified</h4>}
 
           <h4>Payment not verified</h4>
           <h4>Phone not verified</h4>
