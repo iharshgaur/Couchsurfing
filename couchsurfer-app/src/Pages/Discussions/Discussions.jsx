@@ -1,8 +1,6 @@
 import React from "react";
-import { useDispatch } from "react-redux";
 import DiscussionForum from "../../Components/DiscussionForum/DiscussionForum";
-import { changeCountry } from "../../Redux/Discussion/action";
-import { useHistory, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 function Discussions() {
   const { country } = useParams();
   // const dispatch = useDispatch();
