@@ -27,13 +27,14 @@ Along with that, in order to store user data we also used LocalStorage (aka brow
 4. uuid
 5. redux
 6. react-router-dom
+7. axios
 
 You can install the libraries using the "**npm install**" command
 <br>
 
 ## End Notes 📑
 
-In this project we were able to achieve a near to perfect clone of the original website. As we do not want to overwhelm you, we haven't shared all the pages here.Please fork the repository and then use it on your own. If you want to collaborate with us on this project then please fell free to reach out to us.
+In this project we were able to achieve a near to perfect clone of the original website. As we do not want to overwhelm you, we haven't shared all the pages here.Please fork the repository and then use it on your own. If you want to collaborate with us on this project then please feel free to reach out to us.
 
 <br>
 
