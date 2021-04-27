@@ -38,6 +38,22 @@ In this project we were able to achieve a near to perfect clone of the original 
 
 <br>
 
+
+## Features
+
+1. User can create an event or a group
+2. User can join an event or a group
+3. User can interact with other users on the discussion board
+
+<br>
+
+## Limitations
+
+1. Not responsive yet and might not be properly visible on small screen devices
+
+<br>
+
+
 ## Team Members and Contributors 😇
 
 👤 **Harsh gaur**
