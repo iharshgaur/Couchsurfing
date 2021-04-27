@@ -4,6 +4,8 @@
 
 **CouchSurfing** is a global hospitality exchange service accessible via a website and mobile app. Members can request lodging publicly or directly from other members, "hang out" with other members, or join/create events. Harassment is against the terms of service. Members set up user profiles on which other members can post reviews.
 
+![landing page](https://i.ibb.co/VQXt7cL/1-Vu-JJAZC98-E-f-Pu-Cn8x-RFUA-1.png)
+
 In this project we have tried to make a look alike clone of **CouchSurfing**. With our efforts and the technology stack, that we have learned so far in the masai school, we were able to clone the front end with high precision and quality.
 
 # Technology Stack Used 💻
