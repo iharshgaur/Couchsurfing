@@ -40,6 +40,7 @@ const HostTravelers = () => {
 
   React.useEffect(() => {
     handleGet();
+    // eslint-disable-next-line
   }, [country]);
 
   const [details, setDetails] = React.useState({
@@ -374,7 +375,7 @@ const HostTravelers = () => {
           ) : (
             <div className={styles.main__cont__host__info}>
               {hostsData
-                ?.filter((item) => item.country === country)
+                ?.filter((item) => item.country === country) // eslint-disable-next-line
                 .filter((item) => {
                   if (!haveReference) {
                     return item;
@@ -382,6 +383,7 @@ const HostTravelers = () => {
                     return item;
                   }
                 })
+                // eslint-disable-next-line
                 .filter((item) => {
                   if (!isAcceptingGuests) {
                     return item;
@@ -391,7 +393,7 @@ const HostTravelers = () => {
                   ) {
                     return item;
                   }
-                })
+                }) // eslint-disable-next-line
                 .filter((item) => {
                   if (whichCity === "") {
                     return item;
@@ -401,7 +403,7 @@ const HostTravelers = () => {
                   ) {
                     return item;
                   }
-                })
+                }) // eslint-disable-next-line
                 .filter((item) => {
                   if (languageSpoken === "") {
                     return item;
@@ -411,7 +413,7 @@ const HostTravelers = () => {
                   ) {
                     return item;
                   }
-                })
+                }) // eslint-disable-next-line
                 .filter((item) => {
                   if (!isVerified) {
                     return item;

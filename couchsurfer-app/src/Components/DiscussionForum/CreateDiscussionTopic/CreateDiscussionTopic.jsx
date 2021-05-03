@@ -14,7 +14,7 @@ function CreateDiscussionTopic() {
   const history = useHistory();
   const dispatch = useDispatch();
   React.useEffect(() => {
-    dispatch(getCountry());
+    dispatch(getCountry()); // eslint-disable-next-line
   }, []);
 
   const { register, handleSubmit } = useForm();

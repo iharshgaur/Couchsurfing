@@ -41,7 +41,7 @@ function DiscussionForum({ countryName }) {
         </div>
       </div>
       <div className={styles.DiscussionForum__Discussions}>
-        {alldiscussions
+        {alldiscussions // eslint-disable-next-line
           ?.filter((question) => {
             if (searchDiscussion === "") {
               return question;

@@ -6,7 +6,7 @@ function Country() {
   const { country } = useParams();
   React.useEffect(() => {
     document.title = ` ${country} | Couchsurfers`;
-  }, []);
+  }, [country]);
   return (
     <>
       <CountryLists country={country} />

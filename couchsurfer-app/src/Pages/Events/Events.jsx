@@ -22,6 +22,7 @@ const Dashboard = () => {
   const [popUp, setpopUp] = React.useState(false);
   React.useEffect(() => {
     dispatch(getEvents());
+    // eslint-disable-next-line
   }, []);
   const handleCountry = (country) => {
     history.push(`/country/${country}`);
@@ -191,7 +192,7 @@ const Dashboard = () => {
                         </div>
                       </div>
                       <div className="Events__container__right__join">
-                        {e.status == "false" ? (
+                        {e.status === "false" ? (
                           <button onClick={() => handleJoin(e.id)}>JOIN</button>
                         ) : (
                           ""
@@ -203,7 +204,7 @@ const Dashboard = () => {
         </div>
       </div>
       <div
-        style={popUp == false ? { display: "none" } : { display: "block" }}
+        style={popUp === false ? { display: "none" } : { display: "block" }}
         className="Events__addcontainer"
       >
         <img

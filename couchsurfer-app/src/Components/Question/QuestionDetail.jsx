@@ -9,6 +9,7 @@ import Navbar from "../Navbar/Navbar";
 function QuestionDetail() {
   React.useEffect(() => {
     setQues(alldiscussions.find((discussion) => discussion.id === id));
+    // eslint-disable-next-line
   }, []);
   const [comment, setComment] = React.useState("");
   const [ques, setQues] = React.useState({});

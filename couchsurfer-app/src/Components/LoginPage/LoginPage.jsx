@@ -8,6 +8,7 @@ const LoginDetails = () => {
   const dispatch = useDispatch();
   React.useEffect(() => {
     dispatch(getUsers());
+    // eslint-disable-next-line
   }, []);
 
   const Islogin = useSelector((state) => state.auth.Islogin);

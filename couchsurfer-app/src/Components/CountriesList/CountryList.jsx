@@ -19,6 +19,7 @@ function CountryLists({ country }) {
     dispatch(getCountry());
     dispatch(getHosts());
     dispatch(getEvents());
+    // eslint-disable-next-line
   }, [country]);
 
   React.useEffect(() => {
@@ -29,15 +30,15 @@ function CountryLists({ country }) {
     );
 
     setBackImg(
-      countries?.map((ele) => (country === ele.name ? ele.img : ele.img ))
-    );
+      countries?.map((ele) => (country === ele.name ? ele.img : ele.img))
+    ); // eslint-disable-next-line
   }, [countries]);
 
   React.useEffect(() => {
     setCount(
       hostCountries?.filter((country_item) => country === country_item.country)
         .length
-    );
+    ); // eslint-disable-next-line
   }, [hostCountries]);
 
   return (

@@ -20,7 +20,7 @@ const CountryIndia = ({ countryName, cityList, count, events, backImg }) => {
     cityList?.forEach((country_item) =>
       countryName === country_item.name ? setId(country_item.id) : null
     );
-  }, [countryName]);
+  }, [countryName, cityList]);
 
   const dispatch = useDispatch();
 

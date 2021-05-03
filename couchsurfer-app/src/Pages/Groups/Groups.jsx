@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "../../Components/Groups/Groups.css";
 import Navbar from "../../Components/Navbar/Navbar";
-import { getEvents, postEvents, putEvents } from "../../Redux/Events/action";
+import { getEvents, postEvents } from "../../Redux/Events/action";
 const obj = {
   country: "India",
   title: "",
@@ -19,23 +19,17 @@ const Groups = () => {
   }, []);
   const [detail, setDetail] = React.useState(obj);
   const data = useSelector((state) => state.events.data);
-  const [filter, setFilter] = React.useState("All");
   const dispatch = useDispatch();
   const history = useHistory();
   const [popUp, setpopUp] = React.useState(false);
   React.useEffect(() => {
     dispatch(getEvents());
+    // eslint-disable-next-line
   }, []);
   const handleGroups = (id) => {
     history.push(`/groups/${id}`);
   };
 
-  const handleJoin = (id) => {
-    dispatch(putEvents(id, "true"));
-  };
-  const handleRemove = (id) => {
-    dispatch(putEvents(id, "false"));
-  };
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(postEvents(detail));
@@ -103,7 +97,7 @@ const Groups = () => {
         </div>
       </div>
       <div
-        style={popUp == false ? { display: "none" } : { display: "block" }}
+        style={popUp === false ? { display: "none" } : { display: "block" }}
         className="Groups__addcontainer"
       >
         <img

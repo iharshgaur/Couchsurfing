@@ -15,6 +15,7 @@ const GroupsDetail = () => {
   React.useEffect(() => {
     dispatch(getEvents());
     console.log(id);
+    // eslint-disable-next-line
   }, []);
 
   return (
