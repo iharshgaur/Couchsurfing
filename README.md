@@ -77,6 +77,12 @@ In this project we were able to achieve a near to perfect clone of the original 
 
 <br>
 
+## Live Video Demo
+
+https://www.linkedin.com/posts/harshgaur97_i-loved-their-website-so-much-that-tried-activity-6764562679408472066-E1ig
+
+<br>
+
 ## Team Members and Contributors 😇
 
 👤 **Harsh gaur**
