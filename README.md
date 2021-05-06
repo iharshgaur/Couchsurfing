@@ -38,7 +38,7 @@ You can install the libraries using the "**npm install**" command
    ![landing page](./snapshots/Landing.png)
 
 2. Login Page
-   ![login page](./snapshots/Login.png)
+   ![login page](./snapshots/Login.PNG)
 
 3.Dashboard
 ![dashboard page](./snapshots/Dashboard.png)
