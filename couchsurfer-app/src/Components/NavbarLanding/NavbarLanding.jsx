@@ -1,58 +1,106 @@
 import React from "react";
-import { LoginDetails } from "../LoginPage/LoginPage";
-
-import styles from "./NavbarLanding.module.css";
+import "./NavbarLanding.css";
+import { Link, useHistory } from "react-router-dom";
+import { loginSuccess } from "../../Redux/auth/action";
+import { useDispatch } from "react-redux";
 
 const NavbarLanding = () => {
-  const [mount, setMount] = React.useState(false);
-
+  const history = useHistory();
+  const [status, setStatus] = React.useState(false);
+  const [country, setCountry] = React.useState("");
+  const dispatch = useDispatch();
   return (
-    <div className={styles.Navbar__background}>
-      <ul>
-        <li>
-          <img
-            src="https://ht-assets.couchsurfing.com/assets/logo-orange-58ccd2edda8895d1e1742f7744683e61f2c6fa069290a9ff012ef09d51ea643b.png"
-            width="120px"
-            alt="logo"
-          />
-        </li>
-
-        <li>
-          <select className={styles.Navbar__select}>
-            {["English", "Français", "Português", "Italiano", "Español"].map(
-              (item) => (
-                <option key={item} value={item}>
-                  {item}
-                </option>
-              )
-            )}
-          </select>
-        </li>
-
-        <li>
-          <div style={{ width: "100%" }}>How It Works</div>
-        </li>
-
-        <li>
-          <div>Safety</div>
-        </li>
-
-        <li>
-          <button className={styles.Navbar__select__join}>Join</button>
-        </li>
-
-        <li>
-          <button
-            onClick={() => setMount(!mount)}
-            className={styles.Navbar__select__login}
+    <div>
+      <div className="Navbar">
+        <div className="Navbar__left">
+          <img src="https://i.imgur.com/nMkAWNm.png" alt="logo" />
+          <div>
+            <select>
+              <option value="explore">Explore</option>
+              <option value="host">Find Host</option>
+              <option value="member">Find Member</option>
+              <option value="location">Find Loctaion</option>
+              <option value="events">Find Events</option>
+            </select>
+            <img
+              onClick={() => history.push(`/country/${country}`)}
+              src="https://i.imgur.com/L8cOagc.png"
+              alt="search"
+            />
+            <input
+              onChange={(e) => setCountry(e.target.value)}
+              type="text"
+              placeholder="Where are you going?"
+            />
+          </div>
+        </div>
+        <div className="Navbar__linksDiv">
+          <div>
+            <Link className="Navbar__linksDiv__links p1" to="/verify">
+              <img src="https://i.imgur.com/EZaiOyv.png" alt="verify" />
+              <p>Verify</p>
+            </Link>
+          </div>
+          <div>
+            <Link className="Navbar__linksDiv__links" to="/dashboard">
+              <img src="https://i.imgur.com/kP616Fa.png" alt="dasboard" />
+              <p>Dashboard</p>
+            </Link>
+          </div>
+          <div>
+            <Link className="Navbar__linksDiv__links" to="/groups">
+              <img src="https://i.imgur.com/oJIBk65.png" alt="group" />
+              <p>Groups</p>
+            </Link>
+          </div>
+          <div>
+            <Link className="Navbar__linksDiv__links" to="/events">
+              <img src="https://i.imgur.com/XdQafEV.png" alt="event" />
+              <p>Event</p>
+            </Link>
+          </div>
+          <div>
+            <Link className="Navbar__linksDiv__links" to="/inbox">
+              <img src="https://i.imgur.com/AlSftGF.png" alt="inbox" />
+              <p>Inbox</p>
+            </Link>
+          </div>
+          <div>
+            <Link className="Navbar__linksDiv__links" to="/profile">
+              <img src="https://i.imgur.com/oDSouf3.png" alt="profile" />
+              <p>Profile</p>
+            </Link>
+          </div>
+          <div>
+            <Link
+              className="Navbar__linksDiv__links"
+              onClick={() => setStatus(!status)}
+            >
+              <img src="https://i.imgur.com/t54g7h9.png" alt="setting" />
+              <p>Settings</p>
+            </Link>
+          </div>
+        </div>
+      </div>
+      {status && (
+        <div className="Navbar__linksDiv__settings">
+          <Link className="Navbar__linksDiv__links p2" to="/settings">
+            <p>{`Account &Settings`}</p>
+          </Link>
+          <Link
+            onClick={() => {
+              localStorage.clear("login", "false");
+              dispatch(loginSuccess());
+            }}
+            className="Navbar__linksDiv__links p2"
+            to="/"
           >
-            Log In
-          </button>
-        </li>
-      </ul>
-
-      {mount ? <LoginDetails /> : null}
+            <p>Logout</p>
+          </Link>
+        </div>
+      )}
     </div>
   );
 };
-export { NavbarLanding };
+
+export default NavbarLanding;

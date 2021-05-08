@@ -4,7 +4,6 @@ import CreateDiscussion from "../Pages/Discussions/CreateDiscussion/CreateDiscus
 import Discussions from "../Pages/Discussions/Discussions";
 import Profile from "../Pages/Profile/Profile";
 import Question from "../Pages/Question/Question";
-import { LandingPage } from "../Components/LandingPage/LandingPage";
 import Country from "../Pages/countries/countries";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import Settings from "../Pages/Settings";
@@ -14,6 +13,7 @@ import Hosts from "../Pages/Hosts/Hosts";
 import Groups from "../Pages/Groups/Groups";
 import GroupsDetail from "../Pages/GroupsDetail/GroupsDetail";
 import { PrivateRoutes } from "./PrivateRoutes";
+import Landing from "../Pages/Landing/Landing";
 function Routes() {
   return (
     <Switch>
@@ -30,7 +30,7 @@ function Routes() {
         <CreateDiscussion />
       </PrivateRoutes>
       <Route exact path="/">
-        <LandingPage />
+        <Landing />
       </Route>
       <PrivateRoutes exact path="/dashboard">
         <Dashboard />

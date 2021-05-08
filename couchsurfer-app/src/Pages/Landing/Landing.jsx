@@ -1,10 +1,10 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import LoginComponent from "./LoginComponent";
 import { Redirect } from "react-router-dom";
-import styles from "./LoginPage.module.css";
 import { getUsers } from "../../Redux/Users/action";
-const LoginDetails = () => {
+import Login from "../../Components/Login/Login";
+
+function Landing() {
   const dispatch = useDispatch();
   React.useEffect(() => {
     dispatch(getUsers());
@@ -13,10 +13,7 @@ const LoginDetails = () => {
 
   const Islogin = useSelector((state) => state.auth.Islogin);
 
-  return (
-    <div className={styles.loginPage__opacity}>
-      {Islogin ? <Redirect to="/dashboard" /> : <LoginComponent />}
-    </div>
-  );
-};
-export { LoginDetails };
+  return <div>{Islogin ? <Redirect to="/dashboard" /> : <Login />}</div>;
+}
+
+export default Landing;

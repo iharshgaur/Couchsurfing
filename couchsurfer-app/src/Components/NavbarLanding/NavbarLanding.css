@@ -1,0 +1,68 @@
+.Navbar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  background-color: #ffffff;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  height: 80px;
+}
+.Navbar__linksDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 50px;
+}
+.Navbar__linksDiv > div {
+  margin: 10px;
+  text-align: center;
+}
+.Navbar__linksDiv__links {
+  text-decoration: none;
+  margin: 10px;
+  color: black;
+  text-align: center;
+  align-items: center;
+}
+.Navbar__linksDiv__links > p {
+  margin: 0;
+  font-size: 12px;
+  margin-left: 10px;
+}
+.Navbar__linksDiv__links > img {
+  width: 30px;
+}
+.p1 {
+  color: green;
+}
+.Navbar__linksDiv__links:hover {
+  color: orangered;
+}
+.Navbar__left {
+  padding-left: 50px;
+  display: flex;
+  align-items: center;
+}
+.Navbar__left > div {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border-radius: 5px;
+
+  box-shadow: 1px 0px 2px 2px rgb(192, 191, 191);
+  margin-left: 20px;
+}
+.Navbar__left > div > input {
+  width: 300px;
+  height: 95%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.Navbar__left > div > select {
+  height: 38px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
